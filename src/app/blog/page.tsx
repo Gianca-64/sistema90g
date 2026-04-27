@@ -3,12 +3,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Blog Sistema90G - Guide tecniche cucina',
-  description: 'Guide tecniche per evitare errori sul progetto della cucina. Check-up, contratti, misure.',
-  openGraph: {
-    title: 'Blog Sistema90G',
-    description: 'Guide tecniche per non farti fregare sul progetto della cucina',
-    images: ['/hero-errore-800.png'],
-  },
+  description: 'Guide tecniche per evitare errori sul progetto della cucina.',
 }
 
 const articoli = [
