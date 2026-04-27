@@ -1,4 +1,5 @@
- 'use client'
+export const dynamic = "force-dynamic"
+'use client'
 import { useState } from 'react'
 import { supabase } from '@/lib/supabase'
 import Image from 'next/image'
