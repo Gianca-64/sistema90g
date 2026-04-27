@@ -1,4 +1,15 @@
  import Link from 'next/link'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Blog Sistema90G - Guide tecniche cucina',
+  description: 'Guide tecniche per evitare errori sul progetto della cucina. Check-up, contratti, misure.',
+  openGraph: {
+    title: 'Blog Sistema90G',
+    description: 'Guide tecniche per non farti fregare sul progetto della cucina',
+    images: ['/hero-errore-800.png'],
+  },
+}
 
 const articoli = [
   {
@@ -6,7 +17,8 @@ const articoli = [
     titolo: '7 Errori di misura che costano 5000€ in cucina',
     descrizione: 'Il 90% dei progetti cucina ha almeno 1 errore di misura. Ecco i 7 più costosi e come evitarli prima di firmare.',
     data: '27 Aprile 2026',
-    categoria: 'Check-up'
+    categoria: 'Check-up',
+    img: '/hero-errore-800.png'
   }
 ]
 
@@ -22,6 +34,7 @@ export default function Blog() {
         <div className="space-y-8">
           {articoli.map((art) => (
             <article key={art.slug} className="border-b pb-8">
+              <img src={art.img} alt={art.titolo} className="w-full rounded-lg mb-4" />
               <div className="text-sm text-blue-600 font-bold mb-2">{art.categoria}</div>
               <h2 className="text-2xl font-bold mb-3">
                 <Link href={`/blog/${art.slug}`} className="hover:underline">
