@@ -2,6 +2,10 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
 
+type Props = {
+  params: { slug: string }
+}
+
 const articoli: Record<string, any> = {
   'errori-misura-cucina': {
     titolo: '7 Errori di misura che costano 5000€ in cucina',
@@ -61,12 +65,18 @@ const articoli: Record<string, any> = {
   }
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+export async function generateStaticParams() {
+  return Object.keys(articoli).map((slug) => ({
+    slug: slug,
+  }))
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const articolo = articoli[params.slug]
   if (!articolo) return {}
 
   return {
-    title: articolo.titolo,
+    title: `${articolo.titolo} | Sistema90G`,
     description: articolo.descrizione,
     openGraph: {
       title: articolo.titolo,
@@ -77,7 +87,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   }
 }
 
-export default function Articolo({ params }: { params: { slug: string } }) {
+export default function Articolo({ params }: Props) {
   const articolo = articoli[params.slug]
 
   if (!articolo) return notFound()
