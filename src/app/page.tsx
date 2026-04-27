@@ -1,37 +1,34 @@
-import Image from "next/image";
-import { Download, AlertTriangle, Ruler, FileX } from "lucide-react";
+ import Image from "next/image";
+import { Ruler, Cpu, Camera, FileCheck } from "lucide-react";
 
 export default function Sistema90gLanding() {
   return (
     <main className="min-h-screen bg-white text-gray-900">
       {/* HERO */}
-      <section className="relative bg-black text-white">
-        <div className="mx-auto max-w-6xl px-6 py-20 lg:py-28 grid lg:grid-cols-2 gap-12 items-center">
+      <section className="mx-auto max-w-6xl px-6 py-20">
+        <div className="grid items-center gap-12 lg:grid-cols-2">
           <div>
-            <div className="inline-flex items-center gap-2 rounded-full bg-red-600/20 px-3 py-1 text-sm text-red-300 mb-6">
-              <AlertTriangle className="h-4 w-4" />
-              Per cucinieri e falegnami
-            </div>
-            <h1 className="text-4xl lg:text-6xl font-black leading-tight">
-              La cucina è pronta, ma il frigo non entra. <span className="text-red-500">800€ buttati.</span>
+            <h1 className="text-4xl lg:text-6xl font-black tracking-tight">
+              Sistema90G
             </h1>
-            <p className="mt-6 text-lg text-gray-300">
-              Succede ogni settimana: misure sbagliate, clienti furiosi, margini che vanno in fumo. 
-              Sistema90G è la checklist in 9 minuti che azzera gli errori di rilievo prima di produrre.
+            <p className="mt-6 text-xl text-gray-600">
+              Il metodo in 90 giorni per architetti e progettisti: dal rilievo al rendering, senza perdere tempo.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
-              <a href="#scarica" className="rounded-xl bg-red-600 px-6 py-4 text-lg font-bold text-white hover:bg-red-700">
-                Scarica Gratis il PDF “10 Errori che Costano Migliaia di Euro”
+              <a href="/dashboard" className="rounded-xl bg-black px-6 py-4 text-lg font-bold text-white hover:bg-gray-800">
+                Accedi all'app
               </a>
-              <p className="text-sm text-gray-400 self-center">PDF + Video 3 min. Zero spam.</p>
+              <a href="#livelli" className="rounded-xl border border-gray-300 px-6 py-4 text-lg font-medium">
+                Scopri i 4 livelli
+              </a>
             </div>
           </div>
-          <div className="relative">
+          <div>
             <Image
-              src="/hero-errore-800.png"
-              alt="Cucina montata con frigo che non entra, X rossa e 800 euro persi"
+              src="/checklist-mockup.png"
+              alt="Sistema90G Dashboard"
               width={600}
-              height={600}
+              height={400}
               className="rounded-2xl shadow-2xl"
               priority
             />
@@ -39,87 +36,78 @@ export default function Sistema90gLanding() {
         </div>
       </section>
 
-      {/* 3 ERRORI */}
-      <section className="mx-auto max-w-6xl px-6 py-20">
-        <h2 className="text-3xl lg:text-4xl font-bold text-center">
-          Questi 3 errori ti stanno già costando margine
-        </h2>
-        <div className="mt-12 grid gap-8 md:grid-cols-3">
-          <div className="rounded-2xl border border-gray-200 p-8">
-            <Ruler className="h-10 w-10 text-red-600" />
-            <h3 className="mt-4 text-xl font-bold">Frigo che non entra</h3>
-            <p className="mt-2 text-gray-600">Nicchia 60cm, frigo 65cm. Smonti tutto e ricompatti. Cliente incazzato, 2 giorni persi.</p>
-          </div>
-          <div className="rounded-2xl border border-gray-200 p-8">
-            <FileX className="h-10 w-10 text-red-600" />
-            <h3 className="mt-4 text-xl font-bold">Lavastoviglie spostata</h3>
-            <p className="mt-2 text-gray-600">Attacco acqua a 40cm invece che 30cm. Modifica in opera, taglio zoccolo, bestemmia del montatore.</p>
-          </div>
-          <div className="rounded-2xl border border-gray-200 p-8">
-            <AlertTriangle className="h-10 w-10 text-red-600" />
-            <h3 className="mt-4 text-xl font-bold">Boiserie tagliata male</h3>
-            <p className="mt-2 text-gray-600">Presa dietro al pannello. Seghi la boiserie in cantiere. Il cliente vede tutto. Reputazione a zero.</p>
+      {/* 4 LIVELLI */}
+      <section id="livelli" className="bg-gray-50 py-20">
+        <div className="mx-auto max-w-6xl px-6">
+          <h2 className="text-3xl lg:text-4xl font-bold text-center">I 4 livelli di Sistema90G</h2>
+          
+          <div className="mt-16 grid gap-12">
+            {/* LIVELLO 1 + 2 */}
+            <div className="grid items-center gap-8 md:grid-cols-2">
+              <Image
+                src="/hero-errore-800.png"
+                alt="Rilievo Smart e Progetto AI"
+                width={500}
+                height={350}
+                className="rounded-xl shadow-lg"
+              />
+              <div>
+                <div className="flex items-center gap-3">
+                  <Ruler className="h-8 w-8 text-black" />
+                  <h3 className="text-2xl font-bold">1. Rilievo Smart</h3>
+                </div>
+                <p className="mt-3 text-gray-600">App mobile per misure precise in 15 minuti. Stop errori di quotatura.</p>
+                
+                <div className="mt-6 flex items-center gap-3">
+                  <Cpu className="h-8 w-8 text-black" />
+                  <h3 className="text-2xl font-bold">2. Progetto AI</h3>
+                </div>
+                <p className="mt-3 text-gray-600">L'AI genera 3 layout ottimizzati in automatico partendo dal tuo rilievo.</p>
+              </div>
+            </div>
+
+            {/* LIVELLO 3 + 4 */}
+            <div className="grid items-center gap-8 md:grid-cols-2">
+              <div className="md:order-2">
+                <Image
+                  src="/problema-frigo.png"
+                  alt="Rendering Express e Consegna"
+                  width={500}
+                  height={350}
+                  className="rounded-xl shadow-lg"
+                />
+              </div>
+              <div className="md:order-1">
+                <div className="flex items-center gap-3">
+                  <Camera className="h-8 w-8 text-black" />
+                  <h3 className="text-2xl font-bold">3. Rendering Express</h3>
+                </div>
+                <p className="mt-3 text-gray-600">Render fotorealistici pronti in 90 minuti per convincere il cliente subito.</p>
+
+                <div className="mt-6 flex items-center gap-3">
+                  <FileCheck className="h-8 w-8 text-black" />
+                  <h3 className="text-2xl font-bold">4. Consegna Cliente</h3>
+                </div>
+                <p className="mt-3 text-gray-600">Tavole esecutive e capitolato pronti da firmare per falegname e cliente.</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* SOLUZIONE */}
-      <section className="bg-gray-50">
-        <div className="mx-auto max-w-6xl px-6 py-20 grid lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <h2 className="text-3xl lg:text-4xl font-bold">
-              Sistema90G: 9 minuti per non sbagliare più
-            </h2>
-            <ul className="mt-6 space-y-4 text-lg">
-              <li>✅ Checklist di 27 punti critici da spuntare sul posto</li>
-              <li>✅ Sequenza foto da fare col telefono per avere prove</li>
-              <li>✅ Scheda unica che architetto + falegname + montatore capiscono</li>
-            </ul>
-            <p className="mt-6 text-gray-600">
-              Usata da 140+ laboratori. Risparmio medio: 2.400€/anno in errori evitati.
-            </p>
-          </div>
-          <Image
-            src="/mockup-pdf.png"
-            alt="Mockup PDF Sistema90G con checklist e schemi"
-            width={500}
-            height={700}
-            className="rounded-2xl shadow-xl mx-auto"
+      {/* FOOTER - SENZA P.IVA */}
+      <footer className="border-t py-10">
+        <div className="mx-auto max-w-6xl px-6 text-center text-sm text-gray-500">
+          <Image 
+            src="/logo-90g.jpg" 
+            alt="Sistema90G" 
+            width={120} 
+            height={40} 
+            className="mx-auto mb-4"
           />
+          <p>© 2026 Sistema90G. Tutti i diritti riservati.</p>
         </div>
-      </section>
-
-      {/* CTA FINALE */}
-      <section id="scarica" className="bg-black text-white">
-        <div className="mx-auto max-w-3xl px-6 py-20 text-center">
-          <h2 className="text-3xl lg:text-5xl font-black">
-            Scarica ora il PDF gratuito
-          </h2>
-          <p className="mt-4 text-lg text-gray-300">
-            “10 Errori che Costano Migliaia di Euro” + Mini-video 3 min con il metodo.
-          </p>
-          <form className="mx-auto mt-8 flex max-w-md flex-col gap-4">
-            <input
-              type="email"
-              placeholder="La tua email migliore"
-              className="rounded-xl border-0 px-5 py-4 text-gray-900"
-              required
-            />
-            <button
-              type="submit"
-              className="rounded-xl bg-red-600 px-6 py-4 text-lg font-bold hover:bg-red-700 flex items-center justify-center gap-2"
-            >
-              <Download className="h-5 w-5" />
-              Sì, voglio smettere di buttare soldi
-            </button>
-            <p className="text-xs text-gray-500">100% privacy. Cancellati quando vuoi.</p>
-          </form>
-        </div>
-      </section>
-
-      <footer className="py-8 text-center text-sm text-gray-500">
-        © 2026 Sistema90G di Gian Carlo. P.IVA 00000000000
       </footer>
     </main>
-  );
+  )
 }
