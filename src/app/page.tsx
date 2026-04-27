@@ -23,7 +23,7 @@
             </a>
           </div>
           <p className="text-sm text-gray-500 mt-6">
-            Gian Carlo Di Domizio · Arredatore da 20 anni · 127 cucine consegnate senza un errore
+            Gian Carlo · Tecnico progettista da 20 anni · 127 cucine controllate senza un errore
           </p>
         </div>
       </section>
@@ -32,7 +32,7 @@
       <section className="px-6 py-16 bg-white">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            Il mobilificio ti sta vendendo un disegno. <br/>Io ti consegno una cucina che funziona.
+            Il mobilificio ti sta vendendo un disegno. <br/>Io controllo che la cucina funzioni.
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
@@ -58,19 +58,18 @@
       <section className="px-6 py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Sistema90G: L’unico metodo che controlla il progetto PRIMA che firmi
+            Sistema90G: Controllo il progetto PRIMA che firmi
           </h2>
           <p className="text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
-            Non sono un venditore. Sono l’arredatore che fa da scudo tra te e gli errori del mobilificio. 
-            In 90 giorni blindiamo tutto: misure, materiali, contratto.
+            Sono un tecnico progettista indipendente. Faccio da scudo tra te e gli errori del mobilificio. 
+            In 90 giorni blindiamo misure, materiali e contratto.
           </p>
           <div className="bg-white rounded-xl p-8 shadow-lg text-left">
             <h3 className="font-bold text-2xl mb-4">Come funziona:</h3>
             <ol className="space-y-4 text-lg">
               <li><span className="font-bold">1. Mi mandi il progetto</span> del mobilificio su WhatsApp</li>
               <li><span className="font-bold">2. Faccio il Check-up tecnico</span> in 48h: quote, ergonomia, fregature nascoste</li>
-              <li><span className="font-bold">3. Ti ridò il progetto blindato</span> + lista modifiche da far fare al venditore</li>
-              <li><span className="font-bold">4. Se vuoi, ti seguo fino al montaggio</span> con Blindatura Totale o Domination</li>
+              <li><span className="font-bold">3. Ti ridò il progetto corretto</span> + lista modifiche da far fare al venditore</li>
             </ol>
           </div>
         </div>
@@ -80,10 +79,10 @@
       <section id="livelli" className="px-6 py-16 bg-white">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-            Scegli il livello di protezione
+            Scegli il livello di controllo
           </h2>
           <p className="text-center text-gray-600 mb-12 text-xl">
-            Da 147€ a 1.970€. Paghi solo il rischio che vuoi eliminare.
+            Da 147€ a 890€. Paghi solo quello che ti serve.
           </p>
           
           <div className="grid md:grid-cols-3 gap-8">
@@ -92,7 +91,7 @@
             <div className="border-2 border-gray-200 rounded-xl p-8 hover:shadow-xl transition flex flex-col">
               <div className="flex-grow">
                 <h3 className="font-bold text-2xl mb-2">Check-up 147€</h3>
-                <p className="text-gray-600 mb-6">Per chi ha già il progetto e vuole dormire tranquillo prima di firmare.</p>
+                <p className="text-gray-600 mb-6">Hai già il progetto e vuoi evitare errori prima di firmare.</p>
                 <div className="text-4xl font-extrabold mb-6">147€</div>
                 <ul className="space-y-3 text-left mb-6">
                   <li>✓ Analisi tecnica progetto in 48h</li>
@@ -115,58 +114,44 @@
               </div>
               <div className="flex-grow">
                 <h3 className="font-bold text-2xl mb-2">Blindatura 297€</h3>
-                <p className="text-gray-600 mb-6">Per chi vuole garanzia totale: se trovi 1 errore dopo, ti rimborsiamo.</p>
+                <p className="text-gray-600 mb-6">Controllo completo progetto + revisione contratto.</p>
                 <div className="text-4xl font-extrabold mb-6">297€</div>
                 <ul className="space-y-3 text-left mb-6">
                   <li>✓ Tutto del Check-up 147€</li>
                   <li>✓ Revisione contratto mobilificio</li>
-                  <li>✓ Presenza telefonica al montaggio</li>
-                  <li>✓ <span className="font-bold">Garanzia soddisfatto o rimborsato</span></li>
+                  <li>✓ Verifica capitolato e clausole</li>
+                  <li>✓ 2 call di supporto fino alla firma</li>
                 </ul>
               </div>
-              <a href="https://wa.me/393472843084?text=Ciao%20Gian%20Carlo%2C%20voglio%20acquistare%20Blindatura%20Totale%20a%20297%E2%82%AC%20con%20garanzia%20soddisfatto%20o%20rimborsato."
+              <a href="https://wa.me/393472843084?text=Ciao%20Gian%20Carlo%2C%20voglio%20acquistare%20Blindatura%20Totale%20a%20297%E2%82%AC%20con%20revisione%20contratto."
                  target="_blank"
                  className="mt-6 w-full bg-amber-500 hover:bg-amber-600 text-white px-6 py-3 rounded-lg font-bold text-center block transition">
                 Attiva Blindatura 297€
               </a>
             </div>
 
-            {/* DOMINATION 1970 */}
+            {/* PROGETTO DA ZERO 890 */}
             <div className="border-2 border-gray-800 rounded-xl p-8 hover:shadow-xl transition bg-gray-900 text-white flex flex-col">
               <div className="flex-grow">
-                <h3 className="font-bold text-2xl mb-2">Domination 1.970€</h3>
-                <p className="text-gray-300 mb-6">Per chi parte da zero e vuole che gestisca tutto io, da A a Z.</p>
-                <div className="text-4xl font-extrabold mb-6">1.970€</div>
+                <h3 className="font-bold text-2xl mb-2">Progetto da Zero 890€</h3>
+                <p className="text-gray-300 mb-6">Parti da zero? Progetto la cucina con te e ti do 3 preventivi da confrontare.</p>
+                <div className="text-4xl font-extrabold mb-6">890€</div>
                 <ul className="space-y-3 text-left mb-6 text-gray-200">
-                  <li>✓ Tutto della Blindatura 297€</li>
-                  <li>✓ Progettazione 3D da zero con te</li>
-                  <li>✓ Trattativa con 3 mobilifici</li>
-                  <li>✓ Presenza fisica al montaggio</li>
-                  <li>✓ Assistenza 90 giorni post-consegna</li>
+                  <li>✓ Sopralluogo misure + esigenze</li>
+                  <li>✓ Progettazione 3D completa</li>
+                  <li>✓ Capitolato tecnico dettagliato</li>
+                  <li>✓ Invio a 3 mobilifici per preventivi</li>
+                  <li>✓ Analisi comparativa offerte</li>
                 </ul>
               </div>
-              <a href="https://wa.me/393472843084?text=Ciao%20Gian%20Carlo%2C%20voglio%20prenotare%20una%20call%20per%20Sistema90G%20Domination%20da%201.970%E2%82%AC."
+              <a href="https://wa.me/393472843084?text=Ciao%20Gian%20Carlo%2C%20voglio%20partire%20da%20zero%20con%20Progetto%20da%20Zero%20890%E2%82%AC%20per%20la%20mia%20cucina."
                  target="_blank"
                  className="mt-6 w-full bg-white hover:bg-gray-100 text-gray-900 px-6 py-3 rounded-lg font-bold text-center block transition">
-                Prenota Call Domination
+                Richiedi Progetto 890€
               </a>
             </div>
 
           </div>
-        </div>
-      </section>
-
-      {/* GARANZIA */}
-      <section className="px-6 py-16 bg-gray-50">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="text-6xl mb-6">🛡️</div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Garanzia Soddisfatto o Rimborsato
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Con Blindatura 297€ e Domination 1.970€, se dopo il montaggio trovi anche 1 solo errore che non avevo visto io, 
-            ti rimborsiamo l’intero importo. Senza domande. Perché sono sicuro al 100% che non succederà.
-          </p>
         </div>
       </section>
 
@@ -192,7 +177,7 @@
 
       {/* FOOTER */}
       <footer className="px-6 py-8 bg-white border-t text-center text-gray-500 text-sm">
-        <p>Sistema90G © 2026 · Gian Carlo Di Domizio · P.IVA 12345678901</p>
+        <p>Sistema90G © 2026 · Gian Carlo</p>
         <p className="mt-2">
           <a href="/privacy" className="underline">Privacy</a> · 
           <a href="/termini" className="underline ml-2">Termini</a>
