@@ -1,63 +1,66 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import Link from 'next/link'
+
+declare global {
+  interface Window {
+    gtag: (...args: any[]) => void
+  }
+}
 
 export default function CookieBanner() {
   const [showBanner, setShowBanner] = useState(false)
 
   useEffect(() => {
-    const consent = localStorage.getItem('cookie-consent')
+    const consent = localStorage.getItem('cookie_consent')
     if (!consent) {
       setShowBanner(true)
-    } else if (consent === 'accepted') {
-      enableAnalytics()
+    } else if (consent === 'granted') {
+      updateConsent('granted')
     }
   }, [])
 
-  const enableAnalytics = () => {
-    // @ts-ignore
-    window.gtag?.('consent', 'update', {
-      'analytics_storage': 'granted'
-    })
+  const updateConsent = (value: 'granted' | 'denied') => {
+    if (typeof window.gtag !== 'undefined') {
+      window.gtag('consent', 'update', {
+        'analytics_storage': value
+      })
+    }
   }
 
-  const handleAccept = () => {
-    localStorage.setItem('cookie-consent', 'accepted')
-    enableAnalytics()
+  const acceptCookies = () => {
+    localStorage.setItem('cookie_consent', 'granted')
+    updateConsent('granted')
     setShowBanner(false)
   }
 
-  const handleReject = () => {
-    localStorage.setItem('cookie-consent', 'rejected')
-    // @ts-ignore
-    window.gtag?.('consent', 'update', {
-      'analytics_storage': 'denied'
-    })
+  const rejectCookies = () => {
+    localStorage.setItem('cookie_consent', 'denied')
+    updateConsent('denied')
     setShowBanner(false)
   }
 
   if (!showBanner) return null
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 bg-gray-900 text-white p-4 z-50 shadow-2xl">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+    <div className="fixed bottom-0 left-0 right-0 bg-gray-900 text-white p-4 z-50 shadow-lg">
+      <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
         <div className="text-sm">
           <p>
-            Usiamo cookie di Google Analytics per capire come migliorare il sito. 
-            Leggi la <Link href="/privacy" className="underline hover:text-gray-300">Privacy Policy</Link>.
+            Usiamo cookie per analisi anonime con Google Analytics. 
+            <a href="/privacy" className="underline ml-1">Privacy Policy</a>
           </p>
         </div>
-        <div className="flex gap-3 flex-shrink-0">
+        <div className="flex gap-3">
           <button
-            onClick={handleReject}
-            className="px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded-lg text-sm font-bold transition"
+            onClick={rejectCookies}
+            className="px-4 py-2 text-sm border border-gray-500 rounded hover:bg-gray-800"
           >
             Rifiuta
           </button>
           <button
-            onClick={handleAccept}
-            className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg text-sm font-bold transition"
+            onClick={acceptCookies}
+            className="px-4 py-2 text-sm bg-blue-600 rounded hover:bg-blue-700 font-bold"
           >
             Accetta
           </button>
