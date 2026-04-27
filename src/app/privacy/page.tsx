@@ -1,4 +1,6 @@
- export default function Privacy() {
+ import Link from 'next/link'
+
+export default function Privacy() {
   return (
     <main className="min-h-screen bg-white text-gray-900 px-6 py-16">
       <div className="max-w-3xl mx-auto">
@@ -10,35 +12,34 @@
             <p>Sistema90G di Gian Carlo</p>
             <p>Email: sistema90g@icloud.com</p>
             <p>WhatsApp: +39 347 284 3084</p>
-            <p>P.IVA in apertura</p>
           </section>
 
           <section>
             <h2 className="text-2xl font-bold mb-4">Dati raccolti</h2>
-            <p className="mb-2"><strong>1. WhatsApp:</strong> Quando ci scrivi su WhatsApp, raccogliamo nome, numero e contenuto del messaggio per rispondere alla tua richiesta.</p>
-            <p className="mb-2"><strong>2. Dati di navigazione:</strong> Google Analytics raccoglie dati anonimi su pagine visitate, durata, dispositivo. IP anonimizzato.</p>
+            <p className="mb-2"><strong>1. WhatsApp:</strong> Quando ci scrivi su WhatsApp, raccogliamo nome, numero e contenuto del messaggio per rispondere alla tua richiesta di Check-up/Blindatura.</p>
+            <p className="mb-2"><strong>2. Google Analytics:</strong> Raccogliamo dati di navigazione anonimi: pagine visitate, durata sessione, tipo dispositivo. IP anonimizzato. Attivo solo dopo tuo consenso.</p>
           </section>
 
           <section>
             <h2 className="text-2xl font-bold mb-4">Cookie</h2>
             <p className="mb-2"><strong>Cookie tecnici:</strong> Necessari al funzionamento del sito. Non richiedono consenso.</p>
-            <p className="mb-2"><strong>Google Analytics:</strong> Cookie analitici anonimizzati. Attivi solo dopo tuo consenso tramite banner. Puoi revocarli svuotando la cache del browser.</p>
+            <p className="mb-2"><strong>Google Analytics (_ga, _gid):</strong> Cookie analitici anonimizzati. Finalità: statistiche aggregate. Durata: _ga 2 anni, _gid 24 ore. Attivi solo dopo consenso tramite banner.</p>
             <p>Non usiamo cookie di profilazione o marketing.</p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold mb-4">Finalità</h2>
-            <p>I dati WhatsApp servono per fornirti il servizio di Check-up/Blindatura richiesto. I dati Analytics servono per migliorare il sito.</p>
+            <h2 className="text-2xl font-bold mb-4">Finalità e base giuridica</h2>
+            <p>WhatsApp: esecuzione del servizio richiesto. Analytics: consenso. Base giuridica: art. 6 GDPR.</p>
           </section>
 
           <section>
             <h2 className="text-2xl font-bold mb-4">Conservazione</h2>
-            <p>Chat WhatsApp: conservate per 24 mesi. Dati Analytics: 14 mesi su Google Analytics.</p>
+            <p>Chat WhatsApp: 24 mesi. Dati Analytics: 14 mesi su Google Analytics.</p>
           </section>
 
           <section>
             <h2 className="text-2xl font-bold mb-4">I tuoi diritti</h2>
-            <p>Puoi chiedere accesso, rettifica, cancellazione scrivendo a sistema90g@icloud.com. Hai diritto di proporre reclamo al Garante Privacy.</p>
+            <p>Puoi chiedere accesso, rettifica, cancellazione scrivendo a sistema90g@icloud.com. Hai diritto di revocare il consenso ai cookie svuotando la cache. Reclamo al Garante Privacy.</p>
           </section>
 
           <section>
@@ -48,7 +49,7 @@
         </div>
 
         <div className="mt-12 pt-8 border-t">
-          <a href="/" className="text-blue-600 underline">← Torna alla Home</a>
+          <Link href="/" className="text-blue-600 underline">← Torna alla Home</Link>
         </div>
       </div>
     </main>
