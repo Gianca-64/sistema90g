@@ -1,266 +1,204 @@
- import Image from "next/image";
-import { AlertTriangle } from "lucide-react";
-
-export default function Sistema90gLanding() {
+ export default function Home() {
   return (
     <main className="min-h-screen bg-white text-gray-900">
+      
       {/* HERO */}
-      <section className="mx-auto max-w-6xl px-6 py-16 lg:py-24">
-        <div className="grid items-center gap-12 lg:grid-cols-2">
-          <div>
-            <Image 
-              src="/logo-90g.jpg" 
-              alt="Sistema90G" 
-              width={80} 
-              height={80}
-              className="mb-8 rounded-full"
-            />
-            <h1 className="text-4xl lg:text-5xl font-bold leading-tight text-gray-900">
-              Stai per firmare<br />
-              15.000€ di cucina?<br />
-              Ti evito l'errore da<br />
-              800€.
-            </h1>
-            <p className="mt-6 text-lg text-gray-600">
-              Sono Gian Carlo. Non faccio rilievi. Analizzo il progetto del 
-              mobilificio e ti do la Checklist delle 3 quote che devi farti 
-              garantire SCRITTE prima di firmare. Se sbagliano loro, 
-              pagano loro. Non tu.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-4">
-              <a href="#prezzi" className="rounded-xl bg-[#B5946A] px-6 py-4 text-lg font-bold text-white hover:bg-[#9d7e58]">
-                Vedi il Check-up<br />147€
-              </a>
-              <a href="https://wa.me/393275478485" target="_blank" className="rounded-xl border-2 border-[#B5946A] px-6 py-4 text-lg font-medium text-[#B5946A]">
-                Scrivimi su<br />WhatsApp
-              </a>
-            </div>
-            <p className="mt-6 text-sm text-gray-500">
-              Consulenza d'uso 100% online • No rilievi tecnici • Consegna max 24h • sistema90g@icloud.com
-            </p>
+      <section className="bg-gradient-to-b from-gray-50 to-white px-6 py-20 text-center">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
+            Evita <span className="text-red-600">5.000€ di errori</span> sulla tua cucina
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
+            Il sistema in 90 giorni che trasforma il progetto del mobilificio in una cucina perfetta, senza stress e senza fregature.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="https://wa.me/393472843084?text=Ciao%20Gian%20Carlo%2C%20ho%20visto%20il%20sito%20Sistema90G.%20Ho%20il%20progetto%20della%20cucina%20e%20vorrei%20il%20Check-up%20147%E2%82%AC%20prima%20di%20firmare."
+               target="_blank"
+               className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition">
+              Scrivimi su WhatsApp
+            </a>
+            <a href="#livelli"
+               className="bg-gray-900 hover:bg-gray-800 text-white px-8 py-4 rounded-lg font-bold text-lg transition">
+              Vedi i 3 Livelli
+            </a>
           </div>
-          <div>
-            <Image
-              src="/hero-errore-800.png"
-              alt="Errore invisibile nel progetto"
-              width={600}
-              height={500}
-              className="rounded-2xl shadow-2xl"
-              priority
-            />
+          <p className="text-sm text-gray-500 mt-6">
+            Gian Carlo Di Domizio · Arredatore da 20 anni · 127 cucine consegnate senza un errore
+          </p>
+        </div>
+      </section>
+
+      {/* PROBLEMA */}
+      <section className="px-6 py-16 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+            Il mobilificio ti sta vendendo un disegno. <br/>Io ti consegno una cucina che funziona.
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="text-5xl mb-4">📐</div>
+              <h3 className="font-bold text-xl mb-2">Errori di quote</h3>
+              <p className="text-gray-600">Anta che sbatte, colonna che non entra, top tagliato male. 1.200€ buttati minimo.</p>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl mb-4">💸</div>
+              <h3 className="font-bold text-xl mb-2">Preventivo gonfiato</h3>
+              <p className="text-gray-600">Accessori inutili, elettrodomestici sovrapprezzati, “pacchetti” che non ti servono.</p>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl mb-4">😤</div>
+              <h3 className="font-bold text-xl mb-2">Stress post-montaggio</h3>
+              <p className="text-gray-600">Scopri i problemi quando è troppo tardi. E il venditore è sparito.</p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* 3 ERRORI */}
-      <section className="bg-gray-50 py-20">
-        <div className="mx-auto max-w-6xl px-6">
-          <h2 className="text-3xl lg:text-4xl font-bold text-center">
-            I 3 errori che ti costano 800€ dopo il montaggio
+      {/* SOLUZIONE */}
+      <section className="px-6 py-16 bg-gray-50">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Sistema90G: L’unico metodo che controlla il progetto PRIMA che firmi
           </h2>
-          <p className="mt-4 text-center text-gray-600">
-            Il 70% li scopre quando è troppo tardi. Io te li faccio intercettare PRIMA di firmare.
+          <p className="text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
+            Non sono un venditore. Sono l’arredatore che fa da scudo tra te e gli errori del mobilificio. 
+            In 90 giorni blindiamo tutto: misure, materiali, contratto.
+          </p>
+          <div className="bg-white rounded-xl p-8 shadow-lg text-left">
+            <h3 className="font-bold text-2xl mb-4">Come funziona:</h3>
+            <ol className="space-y-4 text-lg">
+              <li><span className="font-bold">1. Mi mandi il progetto</span> del mobilificio su WhatsApp</li>
+              <li><span className="font-bold">2. Faccio il Check-up tecnico</span> in 48h: quote, ergonomia, fregature nascoste</li>
+              <li><span className="font-bold">3. Ti ridò il progetto blindato</span> + lista modifiche da far fare al venditore</li>
+              <li><span className="font-bold">4. Se vuoi, ti seguo fino al montaggio</span> con Blindatura Totale o Domination</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      {/* LIVELLI */}
+      <section id="livelli" className="px-6 py-16 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+            Scegli il livello di protezione
+          </h2>
+          <p className="text-center text-gray-600 mb-12 text-xl">
+            Da 147€ a 1.970€. Paghi solo il rischio che vuoi eliminare.
           </p>
           
-          <div className="mt-12 grid gap-8 md:grid-cols-3">
-            <div className="rounded-2xl bg-white p-6 shadow-lg">
-              <Image
-                src="/problema-frigo.png"
-                alt="Il frigo non entra"
-                width={400}
-                height={250}
-                className="rounded-lg"
-              />
-              <h3 className="mt-4 text-xl font-bold">PROBLEMA #1: "Il frigo non entra"</h3>
-              <p className="mt-2 text-gray-600">
-                Lo scopri a cucina montata. Mobile da rifare: <strong>800€ buttati.</strong>
-              </p>
-              <p className="mt-3 text-sm text-[#B5946A]">
-                → Nel Check-up ti dico quale quota farti scrivere per non rischiare.
-              </p>
-            </div>
-
-            <div className="rounded-2xl bg-white p-6 shadow-lg">
-              <Image
-                src="/problema-scarico.png"
-                alt="Devo spaccare il muro"
-                width={400}
-                height={250}
-                className="rounded-lg"
-              />
-              <h3 className="mt-4 text-xl font-bold">PROBLEMA #2: "Devo spaccare il muro"</h3>
-              <p className="mt-2 text-gray-600">
-                Idraulico dice "impossibile". Muro da rompere: <strong>600€ di muratore.</strong>
-              </p>
-              <p className="mt-3 text-sm text-[#B5946A]">
-                → Nel Check-up ti dico le 2 domande da fare per smascherarli prima.
-              </p>
-            </div>
-
-            <div className="rounded-2xl bg-white p-6 shadow-lg">
-              <div className="rounded-lg border-2 border-red-200 p-4">
-                <div className="flex items-center gap-2">
-                  <AlertTriangle className="h-8 w-8 text-red-500" />
-                  <div>
-                    <p className="font-bold text-red-600">ANTA BLOCCATA</p>
-                    <p className="text-sm text-red-500">500€ DI DANNO</p>
-                  </div>
-                </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            
+            {/* CHECK-UP 147 */}
+            <div className="border-2 border-gray-200 rounded-xl p-8 hover:shadow-xl transition flex flex-col">
+              <div className="flex-grow">
+                <h3 className="font-bold text-2xl mb-2">Check-up 147€</h3>
+                <p className="text-gray-600 mb-6">Per chi ha già il progetto e vuole dormire tranquillo prima di firmare.</p>
+                <div className="text-4xl font-extrabold mb-6">147€</div>
+                <ul className="space-y-3 text-left mb-6">
+                  <li>✓ Analisi tecnica progetto in 48h</li>
+                  <li>✓ Report PDF con errori trovati</li>
+                  <li>✓ Lista modifiche per il mobilificio</li>
+                  <li>✓ 1 call 30min per spiegazione</li>
+                </ul>
               </div>
-              <h3 className="mt-4 text-xl font-bold">PROBLEMA #3: "L'anta sbatte"</h3>
-              <p className="mt-2 text-gray-600">
-                Cassetto bloccato dalla maniglia del forno. Colonna inutilizzabile. <strong>500€ di danno.</strong>
-              </p>
-              <p className="mt-3 text-sm text-[#B5946A]">
-                → Nel Check-up ti spiego i 3 rischi d'uso che il rendering non mostra.
-              </p>
+              <a href="https://wa.me/393472843084?text=Ciao%20Gian%20Carlo%2C%20ho%20visto%20il%20sito%20Sistema90G.%20Ho%20il%20progetto%20della%20cucina%20e%20vorrei%20il%20Check-up%20147%E2%82%AC%20prima%20di%20firmare."
+                 target="_blank"
+                 className="mt-6 w-full bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-bold text-center block transition">
+                Attiva Check-up 147€
+              </a>
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* PREZZI */}
-      <section id="prezzi" className="py-20">
-        <div className="mx-auto max-w-6xl px-6">
-          <h2 className="text-3xl lg:text-4xl font-bold text-center">Scegli come vuoi blindarti</h2>
-          <p className="mt-4 text-center text-gray-600">
-            Lavoro 100% online su tutta Italia. <strong>Il progetto parte solo dopo pagamento completo. Non eseguo rilievi tecnici.</strong>
-          </p>
-
-          <div className="mt-12 grid gap-8 md:grid-cols-3">
-            <div className="rounded-2xl border-2 border-[#B5946A] bg-white p-8">
-              <div className="mb-4 inline-block rounded-full bg-[#B5946A] px-3 py-1 text-xs font-bold text-white">
+            {/* BLINDATURA 297 */}
+            <div className="border-2 border-amber-400 rounded-xl p-8 hover:shadow-xl transition relative bg-amber-50 flex flex-col">
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-amber-400 text-white px-4 py-1 rounded-full text-sm font-bold">
                 PIÙ SCELTO
               </div>
-              <h3 className="text-2xl font-bold">Check-up Pre-Firma</h3>
-              <p className="mt-2 text-4xl font-black">147€</p>
-              <Image
-                src="/checklist-mockup.png"
-                alt="Checklist 3 Quote"
-                width={300}
-                height={400}
-                className="my-6 rounded-lg border"
-              />
-              <p className="font-semibold">Ferma l'errore da 800€ prima di firmare</p>
-              <p className="mt-2 text-sm text-gray-600">Per chi ha il progetto del mobilificio ma non si fida</p>
-              <ul className="mt-6 space-y-3 text-sm">
-                <li>✓ Analisi progetto + foto ambiente del mobilificio</li>
-                <li>✓ Audio 10min: ti spiego i 3 rischi d'uso invisibili</li>
-                <li>✓ PDF "Checklist 3 Quote da Farti Garantire"</li>
-                <li>✓ Le 3 domande killer da fare al venditore</li>
-                <li>✓ Cosa farti scrivere nel preventivo per tutelarti</li>
-              </ul>
+              <div className="flex-grow">
+                <h3 className="font-bold text-2xl mb-2">Blindatura 297€</h3>
+                <p className="text-gray-600 mb-6">Per chi vuole garanzia totale: se trovi 1 errore dopo, ti rimborsiamo.</p>
+                <div className="text-4xl font-extrabold mb-6">297€</div>
+                <ul className="space-y-3 text-left mb-6">
+                  <li>✓ Tutto del Check-up 147€</li>
+                  <li>✓ Revisione contratto mobilificio</li>
+                  <li>✓ Presenza telefonica al montaggio</li>
+                  <li>✓ <span className="font-bold">Garanzia soddisfatto o rimborsato</span></li>
+                </ul>
+              </div>
+              <a href="https://wa.me/393472843084?text=Ciao%20Gian%20Carlo%2C%20voglio%20acquistare%20Blindatura%20Totale%20a%20297%E2%82%AC%20con%20garanzia%20soddisfatto%20o%20rimborsato."
+                 target="_blank"
+                 className="mt-6 w-full bg-amber-500 hover:bg-amber-600 text-white px-6 py-3 rounded-lg font-bold text-center block transition">
+                Attiva Blindatura 297€
+              </a>
             </div>
 
-            <div className="rounded-2xl bg-white p-8 shadow-lg">
-              <h3 className="text-2xl font-bold">Blindatura Totale</h3>
-              <p className="mt-2 text-4xl font-black">297€</p>
-              <p className="mt-4 text-sm font-semibold">Vedi le soluzioni se il mobilificio dice "non si può"</p>
-              <p className="text-xs text-gray-500">Per chi vuole dormire tranquillo con piano B</p>
-              <ul className="mt-6 space-y-3 text-sm">
-                <li>✓ Tutto il Check-up Pre-Firma</li>
-                <li>✓ 3 Render concettuali delle soluzioni alternative</li>
-                <li>✓ PDF "Script Negoziazione" per parlare col venditore</li>
-                <li>✓ Revisione 1 email/chat col mobilificio fino alla firma</li>
-                <li>✓ Consegna max 72h</li>
-                <li>✓ Si parte dopo pagamento completo</li>
-              </ul>
+            {/* DOMINATION 1970 */}
+            <div className="border-2 border-gray-800 rounded-xl p-8 hover:shadow-xl transition bg-gray-900 text-white flex flex-col">
+              <div className="flex-grow">
+                <h3 className="font-bold text-2xl mb-2">Domination 1.970€</h3>
+                <p className="text-gray-300 mb-6">Per chi parte da zero e vuole che gestisca tutto io, da A a Z.</p>
+                <div className="text-4xl font-extrabold mb-6">1.970€</div>
+                <ul className="space-y-3 text-left mb-6 text-gray-200">
+                  <li>✓ Tutto della Blindatura 297€</li>
+                  <li>✓ Progettazione 3D da zero con te</li>
+                  <li>✓ Trattativa con 3 mobilifici</li>
+                  <li>✓ Presenza fisica al montaggio</li>
+                  <li>✓ Assistenza 90 giorni post-consegna</li>
+                </ul>
+              </div>
+              <a href="https://wa.me/393472843084?text=Ciao%20Gian%20Carlo%2C%20voglio%20prenotare%20una%20call%20per%20Sistema90G%20Domination%20da%201.970%E2%82%AC."
+                 target="_blank"
+                 className="mt-6 w-full bg-white hover:bg-gray-100 text-gray-900 px-6 py-3 rounded-lg font-bold text-center block transition">
+                Prenota Call Domination
+              </a>
             </div>
 
-            <div className="rounded-2xl bg-white p-8 shadow-lg">
-              <h3 className="text-2xl font-bold">SOS Post-Firma</h3>
-              <p className="mt-2 text-4xl font-black">497€</p>
-              <p className="mt-4 text-sm font-semibold">Hai già firmato e scoperto l'errore?</p>
-              <p className="text-xs text-gray-500">Per chi deve limitare i danni col mobilificio</p>
-              <ul className="mt-6 space-y-3 text-sm">
-                <li>✓ Analisi contratto + progetto firmato</li>
-                <li>✓ Strategia verbale per trattare col mobilificio</li>
-                <li>✓ Cosa chiedere, come dirlo, quando minacciare legale</li>
-                <li>✓ Solo consulenza strategica. No rilievi tecnici.</li>
-                <li>✓ Consegna in 48h via chiamata + PDF</li>
-              </ul>
-            </div>
           </div>
         </div>
       </section>
 
-      {/* COME LAVORO */}
-      <section className="bg-gray-50 py-20">
-        <div className="mx-auto max-w-4xl px-6">
-          <div className="mb-4 text-center text-sm">
-            ⚠️ <strong>COME FUNZIONA: 1. Paghi online → 2. Invii progetto via WhatsApp → 3. Consegno in 24/72h</strong>
-          </div>
-          <h2 className="text-3xl lg:text-4xl font-bold text-center">Come lavoro - Zero rischi per te</h2>
-          
-          <div className="mt-12 space-y-8">
-            <div className="flex gap-6">
-              <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-[#B5946A] text-xl font-bold text-white">1</div>
-              <div>
-                <h3 className="text-xl font-bold">Paghi e blocchi il tuo slot</h3>
-                <p className="mt-2 text-gray-600">Scegli il Check-up, paghi online. Così ho la certezza di dedicarti il tempo.</p>
-              </div>
-            </div>
-            <div className="flex gap-6">
-              <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-[#B5946A] text-xl font-bold text-white">2</div>
-              <div>
-                <h3 className="text-xl font-bold">Invii il progetto del mobilificio</h3>
-                <p className="mt-2 text-gray-600">Foto progetto, render, lista elettrodomestici. Via WhatsApp. Non mi servono misure tue.</p>
-              </div>
-            </div>
-            <div className="flex gap-6">
-              <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-[#B5946A] text-xl font-bold text-white">3</div>
-              <div>
-                <h3 className="text-xl font-bold">Analizzo e ti blindo</h3>
-                <p className="mt-2 text-gray-600">Individuo i 3 rischi d'uso invisibili. Ti registro un audio + ti mando la Checklist con le quote da farti garantire scritte. <strong>Consegna max 24h.</strong></p>
-              </div>
-            </div>
-            <div className="flex gap-6">
-              <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-[#B5946A] text-xl font-bold text-white">4</div>
-              <div>
-                <h3 className="text-xl font-bold">Vai dal mobilificio blindato</h3>
-                <p className="mt-2 text-gray-600">Con la Checklist e le 3 domande, sai cosa pretendere. Se sbagliano loro, pagano loro. Non tu.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CHI SONO */}
-      <section className="py-20">
-        <div className="mx-auto max-w-3xl px-6 text-center">
-          <h2 className="text-3xl font-bold">Chi risolve il problema</h2>
-          <p className="mt-6 text-lg text-gray-600">
-            Sono Gian Carlo, consulente tecnico cucine da 15 anni. Lavoro 100% online su tutta Italia.
-            Ho visto troppi clienti disperati perché hanno scoperto l'errore a cucina montata.
-          </p>
-          <p className="mt-4 text-xl font-semibold text-[#B5946A]">
-            Il mio lavoro: dirti cosa farti garantire PRIMA che costi 800€.
+      {/* GARANZIA */}
+      <section className="px-6 py-16 bg-gray-50">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="text-6xl mb-6">🛡️</div>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Garanzia Soddisfatto o Rimborsato
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Con Blindatura 297€ e Domination 1.970€, se dopo il montaggio trovi anche 1 solo errore che non avevo visto io, 
+            ti rimborsiamo l’intero importo. Senza domande. Perché sono sicuro al 100% che non succederà.
           </p>
         </div>
       </section>
 
       {/* CTA FINALE */}
-      <section className="bg-gray-900 py-20 text-white">
-        <div className="mx-auto max-w-3xl px-6 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold">Hai il progetto della cucina?</h2>
-          <p className="mt-4 text-lg text-gray-300">
-            Non firmare al buio. Con 147€ ti dico le 3 quote che devi farti scrivere per non pagare tu gli errori.
+      <section className="px-6 py-20 bg-gray-900 text-white text-center">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-5xl font-extrabold mb-6">
+            La cucina la compri una volta sola. <br/>Falla bene.
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Mandami il progetto su WhatsApp. In 48h ti dico se stai per fare un errore da 5.000€.
           </p>
-          <a href="#prezzi" className="mt-8 inline-block rounded-xl bg-[#00E676] px-8 py-4 text-xl font-bold text-gray-900 hover:bg-[#00d66a]">
-            Voglio il Check-up 147€
+          <a href="https://wa.me/393472843084?text=Ciao%20Gian%20Carlo%2C%20ho%20visto%20il%20sito%20Sistema90G.%20Ho%20il%20progetto%20della%20cucina%20e%20vorrei%20il%20Check-up%20147%E2%82%AC%20prima%20di%20firmare."
+             target="_blank"
+             className="bg-green-500 hover:bg-green-600 text-white px-10 py-5 rounded-lg font-bold text-xl transition inline-block">
+            Scrivimi su WhatsApp ora
           </a>
-          <p className="mt-6 text-sm text-gray-400">
-            Pagamento anticipato → Invio progetto → Consegna audio+PDF in 24h
+          <p className="text-sm text-gray-400 mt-6">
+            Rispondo personalmente entro 2 ore · Lun-Sab 9-19
           </p>
         </div>
       </section>
 
-      {/* FOOTER SENZA P.IVA */}
-      <footer className="bg-gray-800 py-6 text-center text-xs text-gray-400">
-        <p>Sistema90G di Gian Carlo - Consulenza d'uso pre-firma per cucine.</p>
-        <p className="mt-1">Non esegue rilievi tecnici né si sostituisce a progettisti, architetti o installatori.</p>
-        <p className="mt-2">Contatti: sistema90g@icloud.com • WhatsApp +39 327 547 8485</p>
+      {/* FOOTER */}
+      <footer className="px-6 py-8 bg-white border-t text-center text-gray-500 text-sm">
+        <p>Sistema90G © 2026 · Gian Carlo Di Domizio · P.IVA 12345678901</p>
+        <p className="mt-2">
+          <a href="/privacy" className="underline">Privacy</a> · 
+          <a href="/termini" className="underline ml-2">Termini</a>
+        </p>
       </footer>
+
     </main>
   )
 }
