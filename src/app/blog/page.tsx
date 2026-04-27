@@ -1,4 +1,4 @@
-import Link from 'next/link'
+ import Link from 'next/link'
 
 const articoli = [
   {
@@ -8,7 +8,6 @@ const articoli = [
     data: '27 Aprile 2026',
     categoria: 'Check-up'
   }
-  // Gli altri li aggiungiamo quando pubblichi
 ]
 
 export default function Blog() {
@@ -19,7 +18,7 @@ export default function Blog() {
         <p className="text-xl text-gray-600 mb-12">
           Guide tecniche per non farti fregare sul progetto della cucina
         </p>
-        
+
         <div className="space-y-8">
           {articoli.map((art) => (
             <article key={art.slug} className="border-b pb-8">
@@ -41,7 +40,7 @@ export default function Blog() {
         </div>
 
         <div className="mt-12 pt-8 border-t">
-          <a href="/" className="text-blue-600 underline">← Torna alla Home</a>
+          <Link href="/" className="text-blue-600 underline">← Torna alla Home</Link>
         </div>
       </div>
     </main>

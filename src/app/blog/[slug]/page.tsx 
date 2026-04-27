@@ -1,4 +1,5 @@
-import { notFound } from 'next/navigation'
+ import { notFound } from 'next/navigation'
+import Link from 'next/link'
 
 const articoli: Record<string, any> = {
   'errori-misura-cucina': {
@@ -7,7 +8,7 @@ const articoli: Record<string, any> = {
     categoria: 'Check-up',
     contenuto: `
       <p class="text-xl mb-6"><strong>Il 90% dei progetti cucina che analizzo ha almeno un errore di misura.</strong> Il problema? Li scopri solo al montaggio, quando ormai hai firmato e pagato.</p>
-      
+
       <p class="mb-6">Risultato: mobili che non entrano, top da rifare, colonne storte. Costo medio dell'errore: 5000€.</p>
 
       <h2 class="text-3xl font-bold mt-12 mb-4">1. Il muro fuori squadro non rilevato</h2>
@@ -42,7 +43,7 @@ const articoli: Record<string, any> = {
         <h3 class="text-2xl font-bold mb-4">Come evitare questi 5000€ di danni?</h3>
         <p class="mb-4">Con il <strong>Check-up 147€</strong> analizzo il tuo progetto in 48h e ti dico esattamente dove sono gli errori, prima che tu firmi.</p>
         <p class="mb-6">Ricevi: report PDF + lista modifiche + 30min di call con me per spiegarti tutto.</p>
-        <a href="https://wa.me/393472843084?text=Ciao,%20ho%20letto%20l'articolo%20sugli%20errori%20di%20misura.%20Voglio%20il%20Check-up" 
+        <a href="https://wa.me/393472843084?text=Ciao,%20ho%20letto%20l'articolo%20sugli%20errori%20di%20misura.%20Voglio%20il%20Check-up"
            class="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg font-bold hover:bg-blue-700">
           Scrivi su WhatsApp per il Check-up →
         </a>
@@ -55,7 +56,7 @@ const articoli: Record<string, any> = {
 
 export default function Articolo({ params }: { params: { slug: string } }) {
   const articolo = articoli[params.slug]
-  
+
   if (!articolo) return notFound()
 
   return (
@@ -64,12 +65,12 @@ export default function Articolo({ params }: { params: { slug: string } }) {
         <div className="text-sm text-blue-600 font-bold mb-4">{articolo.categoria}</div>
         <h1 className="text-4xl font-bold mb-4">{articolo.titolo}</h1>
         <p className="text-sm text-gray-500 mb-8">{articolo.data}</p>
-        
-        <div className="prose prose-lg max-w-none" 
+
+        <div className="prose prose-lg max-w-none"
              dangerouslySetInnerHTML={{ __html: articolo.contenuto }} />
-        
+
         <div className="mt-12 pt-8 border-t">
-          <a href="/blog" className="text-blue-600 underline">← Tutti gli articoli</a>
+          <Link href="/blog" className="text-blue-600 underline">← Tutti gli articoli</Link>
         </div>
       </div>
     </main>
