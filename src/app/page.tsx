@@ -164,7 +164,7 @@
           <p className="text-xl text-gray-300 mb-8">
             Mandami il progetto su WhatsApp. In 48h ti dico se stai per fare un errore da 5.000€.
           </p>
-          <a href="https://wa.me/393472843084?text=Ciao%20Gian%20Carlo%2C%20ho%20visto%20il%20sito%20Sistema90G.%20Ho%20il%20progetto%20della%20cucina%20e%20vorrei%20il%20Check-up%20147%E2%82%AC%20prima%20di%20firmare."
+          <a href="https://wa.me/393472843084?text=Ciao%20Gian%20Carlo%2C%20ho%20visto%20il%20sito%20Sistema90G.%20Vorrei%20informazioni%20sul%20Check-up%20147%E2%82%AC."
              target="_blank"
              className="bg-green-500 hover:bg-green-600 text-white px-10 py-5 rounded-lg font-bold text-xl transition inline-block">
             Scrivimi su WhatsApp ora
