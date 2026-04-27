@@ -1,0 +1,26 @@
+ [
+  {
+    "id": "anta_frigo_tocca",
+    "keywords": ["anta frigo tocca", "frigo tocca", "sportello frigo", "anta sbatte"],
+    "danno_economico": "Perdi colonna da 60cm = 1800€ + frigo non respira = garanzia salta + 400€ compressore",
+    "misura_chiave": "Spazio muro-frigo deve essere min 62cm, sotto sei fuori",
+    "domanda_hook": "Quanto hai tra muro e fianco frigo?",
+    "micro_caso": "Visto a Bergamo: cliente buttato 3.2k per 1.5cm di errore rilievo"
+  },
+  {
+    "id": "forno_caldo",
+    "keywords": ["forno caldo", "forno scalda", "calore forno", "mobile brucia"],
+    "danno_economico": "Pannello carbonizzato = 300€ + rischio incendio",
+    "misura_chiave": "Distanza minima forno-mobile 5cm con pannello termico",
+    "domanda_hook": "Che distanza hai tra forno e fianco colonna?",
+    "micro_caso": "Visto a Milano: cucina rifatta dopo 6 mesi per vernice ingiallita"
+  },
+  {
+    "id": "cassetto_bloccato",
+    "keywords": ["cassetto bloccato", "cassetto non apre", "cassetto duro", "guida rotta"],
+    "danno_economico": "Guida Blum rotta = 120€ + 2h tecnico",
+    "misura_chiave": "Peso max cassetto 30kg, oltre si spacca",
+    "domanda_hook": "Cosa ci metti dentro quel cassetto?",
+    "micro_caso": "Visto a Roma: cliente riempito con piatti, buttato guide nuove ogni anno"
+  }
+]
