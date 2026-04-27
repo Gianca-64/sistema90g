@@ -1,4 +1,4 @@
-import Link from 'next/link'
+ import Link from 'next/link'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -53,7 +53,7 @@ export default function ArticoloErroriMisura() {
           <p className="mb-4">Pavimento vecchio = 1.5cm di dislivello. Lo zoccolo da 10cm non passa. Devi tagliarlo storto o rifare tutto.</p>
           <p className="mb-6"><strong>Quanto costa:</strong> Zoccoli su misura = 300-500€</p>
 
-          <h2 class="text-3xl font-bold mt-12 mb-4">7. Colonna forno troppo vicina al muro</h2>
+          <h2 className="text-3xl font-bold mt-12 mb-4">7. Colonna forno troppo vicina al muro</h2>
           <p className="mb-4">Servono 5cm per apertura anta. Se non ci sono, l'anta striscia o non apre. Unico fix: buttare la colonna.</p>
           <p className="mb-6"><strong>Quanto costa:</strong> Colonna nuova = 800-1200€</p>
 
