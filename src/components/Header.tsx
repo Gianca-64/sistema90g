@@ -4,7 +4,7 @@ export default function Header() {
   return (
     <header className="border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-6 py-8 flex justify-between items-start">
-        <div className="text-xs leading-tight">
+        <div className="text-xs leading-tight font-normal">
           <div>Consulenza Tecnica</div>
           <div>Indipendente</div>
         </div>
@@ -14,7 +14,7 @@ export default function Header() {
           <Link href="/about" className="hover:underline">About</Link>
           <Link href="/blog" className="hover:underline">Blog</Link>
           <Link href="/contatti" className="hover:underline">Contatti</Link>
-          <button className="ml-4">
+          <button className="ml-4" aria-label="Menu">
             <svg width="20" height="14" viewBox="0 0 20 14" fill="none">
               <rect width="20" height="2" fill="black"/>
               <rect y="6" width="20" height="2" fill="black"/>
