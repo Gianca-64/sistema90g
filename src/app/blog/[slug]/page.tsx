@@ -1,6 +1,6 @@
  import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import ServiziBox from '../../../../components/ServiziBox'
+import ServiziBox from '../../../../../components/ServiziBox.tsx'
 
 const articles: Record<string, any> = {
   'errori-distribuzione-open-space-appartamento': {
