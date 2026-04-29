@@ -5,15 +5,15 @@ export default function Home() {
     <main className="min-h-screen bg-white text-gray-900">
       
       {/* HEADER */}
-      <header className="px-6 py-4 flex justify-between items-center max-w-6xl mx-auto">
+      <header className="px-6 py-4 flex justify-between items-center max-w-6xl mx-auto sticky top-0 bg-white z-50 border-b">
         <div className="text-sm leading-tight">
           <p className="font-semibold">Consulenza Tecnica</p>
           <p className="text-gray-600">Indipendente</p>
         </div>
         <nav className="hidden md:flex gap-6 text-sm">
-          <Link href="/">Home</Link>
-          <Link href="/blog">Analisi</Link>
-          <a href="#contatti">Contatti</a>
+          <Link href="/" className="hover:text-green-700">Home</Link>
+          <Link href="/blog" className="hover:text-green-700">Analisi</Link>
+          <a href="#contatti" className="hover:text-green-700">Contatti</a>
         </nav>
       </header>
 
