@@ -1,34 +1,31 @@
- import './globals.css'
-import type { Metadata } from 'next'
-import Script from 'next/script'
+ import type { Metadata } from 'next'
+import './globals.css'
+import Header from '../components/Header'
 
 export const metadata: Metadata = {
-  title: 'Sistema90G',
-  description: 'Analisi tecnica distribuzione interna e verifica progetti cucina - Consulente indipendente',
+  title: 'Analisi Tecniche | Consulenza Indipendente',
+  description: 'Verifiche tecniche preventive su distribuzione appartamento e progetti cucina.',
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="it">
-      <head>
-        <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=G-G5D6FNDR00`}
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-G5D6FNDR00');
-          `}
-        </Script>
-      </head>
-      <body>{children}</body>
+      <body>
+        <Header />
+        {children}
+        <footer id="contatti" className="px-6 py-12 bg-gray-50 text-center text-gray-600 text-sm mt-20">
+          <p>Sistema90G © 2026 · Gian Carlo</p>
+          <p className="mt-2">
+            WhatsApp: <a 
+              href="https://wa.me/393275478485" 
+              target="_blank"
+              className="text-green-700 underline font-semibold"
+            >
+              +39 327 547 8485
+            </a>
+          </p>
+        </footer>
+      </body>
     </html>
   )
 }
