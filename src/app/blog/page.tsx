@@ -1,99 +1,98 @@
-import Link from 'next/link'
-import ServiziBox from '@/components/ServiziBox'
+ import Link from 'next/link'
+import Image from 'next/image'
 
-export const metadata = {
-  title: 'Blog | Analisi Tecniche Indipendenti',
-  description: 'Articoli tecnici su distribuzione, norme, impianti e verifiche per progetti cucina e appartamento.',
-}
+const articles = [
+  {
+    slug: 'errori-progetto-cucina-prima-firmare',
+    title: 'Progetto cucina: 5 errori che ti costano 13.000€ dopo la firma',
+    excerpt: 'Quote sbagliate, impianti fuori posto, elettrodomestici che non entrano. Ecco i 5 errori tecnici che trovo nel 90% dei progetti prima della firma.',
+    image: '/blog/progetto-cucina-errori.jpg',
+    livello: 'LIVELLO 2 CUCINA',
+    ctaText: 'Check-up',
+    ctaPrice: '147€',
+    ctaLink: '/servizi/check-up-cucina'
+  },
+  {
+    slug: 'errori-distribuzione-open-space-appartamento',
+    title: 'Open space: 5 errori di distribuzione che scopri solo dopo il rogito',
+    excerpt: 'Percorsi incrociati, distanze non rispettate, impianti impossibili. Controlla la planimetria prima di comprare casa.',
+    image: '/blog/open-space-planimetria.jpg',
+    livello: 'LIVELLO 1',
+    ctaText: 'Distribuzione',
+    ctaPrice: '97€',
+    ctaLink: '/servizi/distribuzione'
+  },
+  {
+    slug: 'clausole-contratto-mobilificio',
+    title: 'Contratto mobilificio: 3 clausole che ti costano soldi dopo',
+    excerpt: 'Penali, tempi di consegna, cosa è davvero incluso. Come leggere il contratto prima di firmare.',
+    image: '/blog/contratto-cucina.jpg',
+    livello: 'LIVELLO 3',
+    ctaText: 'Blindatura',
+    ctaPrice: '297€',
+    ctaLink: '/servizi/blindatura'
+  }
+]
 
-export default function BlogPage() {
-  const articoli = [
-    {
-      slug: 'errori-distribuzione-open-space-appartamento',
-      img: '/hero-distribuzione-800.jpeg',
-      cat: 'Distribuzione Interna',
-      data: '29 Apr 2026',
-      min: '7 min',
-      titolo: 'Open space: 5 errori di distribuzione che costano 15.000€ di modifiche',
-      desc: 'Analisi tecnica dei 5 errori distributivi più frequenti nelle piante open space.'
-    },
-    {
-      slug: 'verifiche-misure-progetto-cucina',
-      img: '/hero-verifica-cucina-800.jpeg',
-      cat: 'Verifica Progetto',
-      data: '27 Apr 2026',
-      min: '8 min',
-      titolo: '7 Verifiche tecniche prima di confermare il progetto cucina',
-      desc: 'Check-list per validare quote, impianti e conformità norme UNI del progetto cucina prima dell\'ordine.'
-    },
-    {
-      slug: 'induzione-vs-gas-verifiche-impianti',
-      img: '/hero-induzione-800.jpeg',
-      cat: 'Elettrodomestici',
-      data: '24 Apr 2026',
-      min: '6 min',
-      titolo: 'Piano induzione vs gas: verifiche tecniche su impianti e areazione',
-      desc: 'Analisi comparativa dei requisiti tecnici: potenza elettrica, sezione cavi, volume ambiente e canna fumaria.'
-    },
-    {
-      slug: 'distanze-minime-camera-norme-abitabilita',
-      img: '/hero-camera-800.jpeg',
-      cat: 'Normative',
-      data: '22 Apr 2026',
-      min: '5 min',
-      titolo: 'Distanze minime camera da letto: norme che bloccano l\'abitabilità',
-      desc: 'Verifica tecnica delle distanze letto-pareti, armadio-passaggio e aperture secondo DM 1975.'
-    }
-  ]
-
+export default function Blog() {
   return (
-    <main className="min-h-screen bg-white">
-      <div className="max-w-6xl mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-          <div className="lg:col-span-2">
-            <h1 className="text-4xl font-bold text-slate-900 mb-3">Analisi Tecniche</h1>
-            <p className="text-lg text-slate-600 mb-12">
-              Approfondimenti tecnici su distribuzione, normative e verifiche preventive.
-            </p>
-
-            <div className="space-y-12">
-              {articoli.map((art) => (
-                <article key={art.slug} className="border-b border-slate-200 pb-12">
-                  <Link href={`/blog/${art.slug}`}>
-                    <img 
-                      src={art.img}
-                      alt={art.titolo}
-                      className="w-full h-64 object-cover rounded-lg mb-6 hover:opacity-90 transition"
-                    />
-                  </Link>
-                  <div className="flex items-center gap-3 text-sm text-slate-500 mb-3">
-                    <span className="bg-slate-100 px-3 py-1 rounded">{art.cat}</span>
-                    <span>{art.data}</span>
-                    <span>·</span>
-                    <span>{art.min}</span>
-                  </div>
-                  <Link href={`/blog/${art.slug}`}>
-                    <h2 className="text-2xl font-bold text-slate-900 mb-3 hover:text-blue-600 transition">
-                      {art.titolo}
-                    </h2>
-                  </Link>
-                  <p className="text-slate-600 leading-relaxed mb-4">{art.desc}</p>
-                  <Link 
-                    href={`/blog/${art.slug}`}
-                    className="text-blue-600 font-semibold hover:text-blue-800"
-                  >
-                    Leggi l'analisi completa →
-                  </Link>
-                </article>
-              ))}
-            </div>
-          </div>
-
-          <aside className="lg:col-span-1">
-            <ServiziBox />
-          </aside>
+    <>
+      {/* HERO BLOG */}
+      <section className="bg-slate-50 py-16 md:py-20">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <h1 className="text-4xl md:text-5xl font-serif font-bold mb-4">Analisi Tecniche</h1>
+          <p className="text-lg text-slate-600">
+            Errori di progetto, contratti, capitolati: come evitarli prima di firmare
+          </p>
         </div>
-      </div>
-    </main>
+      </section>
+
+      {/* LISTA ARTICOLI */}
+      <main className="max-w-6xl mx-auto px-6 py-16">
+        <div className="space-y-20">
+          {articles.map((post, index) => (
+            <article key={post.slug} className="grid md:grid-cols-2 gap-8 md:gap-12 items-start">
+              
+              {/* Immagine */}
+              <div className={index % 2 === 1? 'md:order-2' : ''}>
+                <Link href={`/blog/${post.slug}`}>
+                  <Image 
+                    src={post.image} 
+                    alt={post.title}
+                    width={600}
+                    height={450}
+                    className="w-full rounded-lg object-cover hover:opacity-90 transition"
+                  />
+                </Link>
+              </div>
+
+              {/* Testo */}
+              <div className={index % 2 === 1? 'md:order-1' : ''}>
+                <p className="text-sm font-semibold text-green-700 mb-2">{post.livello}</p>
+                <Link href={`/blog/${post.slug}`}>
+                  <h2 className="text-3xl md:text-4xl font-serif font-bold mb-4 hover:text-green-700 transition leading-tight">
+                    {post.title}
+                  </h2>
+                </Link>
+                <p className="text-slate-700 leading-relaxed mb-6">
+                  {post.excerpt}
+                </p>
+                
+                <div className="flex items-center gap-4 text-sm">
+                  <span className="font-semibold">Servizio:</span>
+                  <Link 
+                    href={post.ctaLink}
+                    className="text-green-700 font-semibold hover:underline"
+                  >
+                    {post.ctaText} {post.ctaPrice}
+                  </Link>
+                </div>
+              </div>
+
+            </article>
+          ))}
+        </div>
+      </main>
+    </>
   )
 }

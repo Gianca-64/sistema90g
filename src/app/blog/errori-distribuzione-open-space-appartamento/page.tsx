@@ -1,129 +1,108 @@
  import Link from 'next/link'
-import type { Metadata } from 'next'
-import ServiziBox from '@/components/ServiziBox'
+import Image from 'next/image'
 
-export const metadata: Metadata = {
-  title: 'Analisi Tecniche | Consulenza Indipendente Progetti e Distribuzione',
-  description: 'Verifiche tecniche preventive su distribuzione appartamento e progetti cucina. Supporto super partes per privati, architetti e rivenditori prima dei lavori.',
+export const metadata = {
+  title: 'Open space: 5 errori di distribuzione che costano 13.000€ dopo il rogito',
+  description: 'Percorsi incrociati, distanze non rispettate, impianti impossibili. Controlla la planimetria prima di comprare casa o ristrutturare.'
 }
 
-const articoli = [
-  {
-    slug: 'errori-distribuzione-open-space-appartamento',
-    titolo: 'Open space: 5 errori di distribuzione che costano 15.000€ di modifiche',
-    descrizione: 'Analisi tecnica dei 5 errori distributivi più frequenti nelle piante open space. Verifica flussi, norme disimpegno, scarichi e illuminazione prima di tracciare i muri.',
-    data: '29 Aprile 2026',
-    categoria: 'Distribuzione Interna',
-    img: '/hero-distribuzione-800.png',
-    readTime: '7 min',
-    servizio: 'Analisi Distribuzione 97€'
-  },
-  {
-    slug: 'verifiche-misure-progetto-cucina',
-    titolo: '7 Verifiche tecniche prima di confermare il progetto cucina',
-    descrizione: 'Check-list per validare quote, impianti e conformità norme UNI del progetto cucina prima dell\'ordine. Guida tecnica per committenti e progettisti.',
-    data: '27 Aprile 2026',
-    categoria: 'Verifica Progetto',
-    img: '/hero-verifica-cucina-800.png',
-    readTime: '8 min',
-    servizio: 'Check-up Progetto 147€'
-  },
-  {
-    slug: 'induzione-vs-gas-verifiche-impianti',
-    titolo: 'Piano induzione vs gas: verifiche tecniche su impianti e areazione',
-    descrizione: 'Analisi comparativa dei requisiti tecnici: potenza elettrica, sezione cavi, volume ambiente e canna fumaria. Cosa verificare prima di scegliere.',
-    data: '24 Aprile 2026',
-    categoria: 'Elettrodomestici',
-    img: '/hero-induzione-800.png',
-    readTime: '6 min',
-    servizio: 'Check-up Progetto 147€'
-  },
-  {
-    slug: 'distanze-minime-camera-norme-abitabilita',
-    titolo: 'Distanze minime camera da letto: norme che bloccano l\'abitabilità',
-    descrizione: 'Verifica tecnica delle distanze letto-pareti, armadio-passaggio e aperture secondo DM 1975 e norme regionali. Errori che invalidano l\'agibilità.',
-    data: '22 Aprile 2026',
-    categoria: 'Normative',
-    img: '/hero-camera-800.png',
-    readTime: '5 min',
-    servizio: 'Analisi Distribuzione 97€'
-  }
-]
-
-export default function Blog() {
+export default function Articolo() {
   return (
-    <main className="bg-white">
-      <div className="border-b border-slate-200">
-        <div className="max-w-6xl mx-auto px-6 py-12">
-          <p className="text-sm text-slate-500 mb-2">Consulenza Tecnica Indipendente</p>
-          <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 mb-3">
-            Analisi Tecniche
+    <div className="max-w-6xl mx-auto px-6 py-12 md:py-16">
+      <div className="grid lg:grid-cols-3 gap-12">
+        
+        <article className="lg:col-span-2">
+          <Link href="/blog" className="text-green-700 text-sm mb-6 inline-block hover:underline">← Torna al blog</Link>
+          <p className="text-sm text-slate-500 mb-2">Distribuzione Interna · 10 Gennaio 2026 · 7 min</p>
+          <h1 className="text-4xl md:text-5xl font-serif font-bold mb-8 leading-tight">
+            Open space: 5 errori di distribuzione che costano 13.000€ dopo il rogito
           </h1>
-          <p className="text-lg text-slate-600 max-w-2xl">
-            Verifiche preventive su distribuzione appartamento e progetti cucina. 
-            Supporto super partes per privati, architetti e rivenditori.
-          </p>
-        </div>
-      </div>
+          
+          <div className="prose prose-lg max-w-none prose-headings:font-serif prose-headings:font-bold prose-p:leading-relaxed">
+            <p className="text-lg leading-relaxed mb-6">
+              Gli open space sembrano facili. In realtà nascondono 5 errori tecnici che ti costano 
+              tra 2.000€ e 13.000€ in soluzioni correttive che scopri solo dopo il rogito.
+            </p>
+            <p className="mb-8">
+              <strong>Il problema:</strong> una volta tracciati i muri, spostarli costa come rifare casa.
+            </p>
+            
+            <h2>1. Percorsi incrociati cucina-soggiorno</h2>
+            <p>
+              Se il percorso dalla cucina al tavolo attraversa l'area relax, avrai sempre piatti sporchi in vista. 
+              Errore da <strong>3.500€ di parete in cartongesso</strong> per dividere dopo.
+            </p>
+            <Image 
+              src="/blog/open-space-planimetria.jpg" 
+              alt="Planimetria open space errori" 
+              width={800} 
+              height={500} 
+              className="rounded-lg my-8" 
+            />
+            
+            <h2>2. Distanze minime non rispettate</h2>
+            <p>
+              Tra divano e TV servono almeno 2,2m. Tra tavolo e parete 90cm per passare con le sedie. 
+              Se la pianta non rispetta questi numeri, vivi scomodo per sempre. <strong>Non si corregge.</strong>
+            </p>
+            
+            <h2>3. Impianti cucina impossibili</h2>
+            <p>
+              Scarico troppo lontano dalla colonna. Cappa senza uscita esterna. Gas che passa in mezzo al soggiorno. 
+              Costo spostamento impianti a massetto fatto: <strong>4.000€ + demolizioni.</strong>
+            </p>
 
-      <div className="max-w-6xl mx-auto px-6 py-16">
-        <div className="grid lg:grid-cols-3 gap-12">
-          {/* Colonna articoli */}
-          <div className="lg:col-span-2 space-y-16">
-            {articoli.map((art, idx) => (
-              <article key={art.slug} className={idx !== 0 ? 'pt-16 border-t border-slate-100' : ''}>
-                <div className="grid md:grid-cols-3 gap-6 items-start">
-                  <Link href={`/blog/${art.slug}`} className="md:col-span-1">
-                    <img 
-                      src={art.img} 
-                      alt={art.titolo}
-                      loading="lazy"
-                      className="w-full aspect-[4/3] object-cover rounded-lg"
-                    />
-                  </Link>
-                  
-                  <div className="md:col-span-2">
-                    <div className="flex items-center gap-3 text-xs text-slate-500 mb-3">
-                      <span className="uppercase tracking-wide font-medium">{art.categoria}</span>
-                      <span>·</span>
-                      <time>{art.data}</time>
-                      <span>·</span>
-                      <span>{art.readTime}</span>
-                    </div>
+            <h2>4. Finestre che tagliano i mobili</h2>
+            <p>
+              Finestra a 80cm da terra dove dovrebbe andare la cucina. Porta-finestra che impedisce il divano. 
+              Devi rinunciare a mobili o luce. <strong>Vale 6.000€ di spazio perso.</strong>
+            </p>
 
-                    <h2 className="text-2xl font-bold mb-3 text-slate-900 leading-tight">
-                      <Link href={`/blog/${art.slug}`} className="hover:text-slate-600 transition">
-                        {art.titolo}
-                      </Link>
-                    </h2>
-                    
-                    <p className="text-slate-600 mb-4 leading-relaxed">
-                      {art.descrizione}
-                    </p>
-                    
-                    <div className="flex items-center justify-between">
-                      <Link 
-                        href={`/blog/${art.slug}`} 
-                        className="text-sm font-medium text-slate-900 underline underline-offset-4 hover:text-slate-600"
-                      >
-                        Leggi l'analisi tecnica
-                      </Link>
-                      <span className="text-xs text-slate-500">{art.servizio}</span>
-                    </div>
-                  </div>
-                </div>
-              </article>
-            ))}
+            <h2>5. Pilastri in mezzo alla stanza</h2>
+            <p>
+              Quel pilastro al centro non lo sposti. Se non progetti i flussi attorno, ti mangia 4mq utili. 
+              <strong>Vale 8.000€ di spazio buttato</strong> a 2.000€/mq.
+            </p>
+          </div>
+        </article>
+
+        <aside className="lg:col-span-1">
+          <div className="sticky top-24 bg-green-50 border-2 border-green-200 rounded-xl p-6">
+            <p className="text-xs font-semibold text-green-700 mb-2">LIVELLO 1</p>
+            <h3 className="font-bold text-xl mb-3">Distribuzione 97€</h3>
+            <p className="text-sm text-slate-700 mb-4">
+              Verifica pianta appartamento completo. 12 punti di controllo su impianti, norme, flussi. 
+              Report PDF 15 pagine in 24h + call 30min.
+            </p>
+            <Link 
+              href="/servizi/distribuzione"
+              className="block w-full bg-green-700 text-white text-center py-3 rounded-lg font-semibold hover:bg-green-800 transition"
+            >
+              Analizza Distribuzione 97€
+            </Link>
+            <p className="text-xs text-slate-500 mt-3">Eviti errori da 10.000€</p>
           </div>
 
-          {/* Sidebar Servizi */}
-          <div className="lg:col-span-1">
-            <div className="sticky top-8">
-              <ServiziBox />
+          <div className="mt-8">
+            <h4 className="font-bold mb-4">Altri articoli</h4>
+            <div className="space-y-4">
+              <Link href="/blog/verifiche-misure-progetto-cucina" className="block group">
+                <p className="text-sm font-semibold text-green-700">LIVELLO 2 CUCINA</p>
+                <p className="text-sm group-hover:text-green-700 transition">
+                  7 Verifiche misure progetto cucina prima di firmare
+                </p>
+              </Link>
+              <Link href="/blog/induzione-vs-gas-verifiche-impianti" className="block group">
+                <p className="text-sm font-semibold text-green-700">LIVELLO 2 CUCINA</p>
+                <p className="text-sm group-hover:text-green-700 transition">
+                  Piano induzione: serve aumentare il contatore? Verifica prima di scegliere
+                </p>
+              </Link>
             </div>
           </div>
-        </div>
+        </aside>
+
       </div>
-    </main>
+    </div>
   )
 }
