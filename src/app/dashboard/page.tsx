@@ -4,8 +4,7 @@ import { useState, useEffect } from 'react'
 import { FileText, Phone, Plus, Search, X } from 'lucide-react'
 import { supabase } from '@/lib/supabase'
 import { useRouter } from 'next/navigation'
-import { Facebook } from 'lucide-react'
-
+import { FileText, Phone, Plus, Search, X, FacebookIcon } from 'lucide-react'
 type Caso = {
   id: number
   numero_pratica: string
@@ -172,7 +171,7 @@ export default function DashboardPage() {
                   <span className="font-medium">Telefono:</span> {detailModal.telefono || 'N/A'}
                 </div>
                 <div className="flex items-center gap-2 text-sm text-slate-600">
-                  <Facebook className="w-4 h-4 text-blue-600" />
+                  <FacebookIcon className="w-4 h-4 text-blue-600" />
                   <span className="font-medium">Gruppo:</span> {detailModal.gruppo_facebook || 'N/A'}
                 </div>
               </div>
