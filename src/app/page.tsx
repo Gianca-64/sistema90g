@@ -13,15 +13,16 @@ export default function Home() {
       <section className="max-w-3xl mx-auto px-6 py-16 text-center border-b">
         <h2 className="text-2xl font-serif mb-6">Cosa faccio</h2>
         <p className="text-gray-700 leading-relaxed mb-4">
-          Sono Gian Carlo Primo, tecnico indipendente. 
+          Sono Gian Carlo Primo, tecnico indipendente.
         </p>
         <p className="text-gray-700 leading-relaxed mb-4">
           Analizzo progetti cucina prima che inizino i lavori. Verifico impianti, misure, scarichi, 
-          prese e vincoli tecnici che il 90% dei mobilieri ignora.
+          prese e vincoli tecnici che vengono ignorati. Analizzo anche la distribuzione interna 
+          degli appartamenti/ville per trovare soluzioni ottimali e funzionali.
         </p>
         <p className="text-gray-700 leading-relaxed">
-          Il mio lavoro ti fa risparmiare 5.000-15.000€ evitando modifiche in cantiere, 
-          ritardi e contenziosi. Ricevi una relazione tecnica che puoi usare con qualsiasi fornitore.
+          Il mio lavoro ti fa risparmiare evitando modifiche in cantiere, ritardi e contenziosi. 
+          Ricevi una relazione tecnica che puoi usare con qualsiasi fornitore.
         </p>
       </section>
 
