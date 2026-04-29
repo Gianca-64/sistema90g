@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { FileText, Phone, Plus, Search, X } from 'lucide-react'
 import { supabase } from '@/lib/supabase'
 import { useRouter } from 'next/navigation'
+import { Facebook } from 'lucide-react'
 
 type Caso = {
   id: number
