@@ -69,7 +69,10 @@ export default async function Page({ params }: { params: { id: string } }) {
                 </div>
               )) : <p className="text-gray-500 text-sm text-center py-8">Nessun messaggio ancora.</p>}
             </div>
-            <form action={inviaMessaggioConId} className="flex gap-2">
+            <form action={async (formData: FormData) => {
+                const testo = formData.get('testo') as string
+                await inviaMessaggioConId(testo, 'umano')
+            }} className="flex gap-2">
               <input name="testo" type="text" placeholder="Scrivi un messaggio..." className="flex-1 border rounded px-3 py-2" required />
               <button type="submit" className="bg-black text-white px-6 py-2 rounded">Invia</button>
             </form>
