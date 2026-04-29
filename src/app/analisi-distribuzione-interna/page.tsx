@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
 import ServiziBox from '../../components/ServiziBox'
-
 export const metadata: Metadata = {
   title: 'Analisi Distribuzione Interna Appartamento 97€ | Verifica Pianta Tecnica',
   description: 'Servizio di analisi tecnica della distribuzione interna appartamento prima dei lavori. Verifica flussi, norme, impianti. Consulenza indipendente 97€.',
