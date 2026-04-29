@@ -11,7 +11,6 @@ export default function Header() {
         
         <nav className="flex items-center gap-8 text-sm">
           <Link href="/" className="hover:underline">Home</Link>
-          <Link href="/about" className="hover:underline">About</Link>
           <Link href="/blog" className="hover:underline">Blog</Link>
           <Link href="/contatti" className="hover:underline">Contatti</Link>
           <button className="ml-4" aria-label="Menu">
