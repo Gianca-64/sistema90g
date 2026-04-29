@@ -1,4 +1,49 @@
-import Link from 'next/link'
+ import Link from 'next/link'
+
+const articoli = [
+  {
+    slug: 'open-space-errori',
+    categoria: 'DISTRIBUZIONE',
+    titolo: 'Open space: 5 errori di distribuzione da evitare prima del cantiere',
+    descrizione: 'Isola che blocca il passaggio, triangolo di lavoro interrotto, flussi incrociati. I 5 errori tecnici che richiedono modifiche murarie dopo.',
+    immagine: '/hero-distribuzione-800.jpeg'
+  },
+  {
+    slug: 'verifiche-misure-progetto-cucina',
+    categoria: 'VERIFICA PROGETTO',
+    titolo: '7 Verifiche tecniche prima di progettare la cucina',
+    descrizione: 'Scarichi, prese, fori cappa, ventilazione frigo. Le 7 quote che il mobiliere non controlla e che ti obbligano a interventi edili dopo la firma.',
+    immagine: '/hero-verifica-cucina-800.jpeg'
+  },
+  {
+    slug: 'capitolato-cucina-cosa-controllare',
+    categoria: 'CAPITOLATO',
+    titolo: 'Capitolato cucina: cosa controllare prima di firmare',
+    descrizione: 'Tempi di consegna, penali, tolleranze di montaggio. Le clausole che proteggono te e che mancano nel 90% dei preventivi.',
+    immagine: '/hero-capitolato-800.jpeg'
+  },
+  {
+    slug: 'induzione-vs-gas-verifiche-impianti',
+    categoria: 'IMPIANTI',
+    titolo: 'Induzione vs Gas: verifiche impianti obbligatorie',
+    descrizione: 'Linee dedicate, potenze, prese d\'aria. Cosa serve davvero per non rifare l\'impianto elettrico o del gas dopo.',
+    immagine: '/hero-induzione-800.jpeg'
+  },
+  {
+    slug: 'progetto-cucina-da-zero-come-fare',
+    categoria: 'PROGETTO',
+    titolo: 'Progetto cucina da zero: come si fa senza errori',
+    descrizione: 'Ordine corretto delle fasi: prima gli impianti, poi i muri, poi i mobili. La sequenza che evita cantieri infiniti.',
+    immagine: '/hero-progetto-zero-800.jpeg'
+  },
+  {
+    slug: 'revisione-contratto-cucina-clausole-da-controllare',
+    categoria: 'CONTRATTO',
+    titolo: 'Revisione contratto cucina: clausole da controllare',
+    descrizione: 'Variazioni di prezzo, consegna ritardata, difformità. I 3 punti che devi far scrivere nero su bianco prima di firmare.',
+    immagine: '/hero-contratto-800.jpeg'
+  }
+]
 
 export default function Home() {
   return (
@@ -27,54 +72,53 @@ export default function Home() {
       </section>
 
       <section className="max-w-7xl mx-auto px-6 py-16">
-        <article className="grid md:grid-cols-2 gap-12 mb-16 pb-16 border-b items-center">
-          <div className="max-h-96 overflow-hidden rounded-lg">
-            <img 
-              src="/hero-distribuzione-800.jpeg"
-              alt="Open space: errori di distribuzione"
-              className="w-full h-full object-cover"
-            />
-          </div>
-          <div>
-            <h2 className="text-3xl font-serif mb-4">
-              Open space: 5 errori di distribuzione da evitare prima del cantiere
-            </h2>
-            <p className="text-gray-600 mb-6 leading-relaxed">
-              Isola che blocca il passaggio, triangolo di lavoro interrotto, flussi incrociati. 
-              I 5 errori tecnici che compromettono la funzionalità e richiedono modifiche murarie dopo.
-            </p>
-            <div className="flex gap-6 text-sm">
-              <Link href="/blog/open-space-errori" className="text-green-700 hover:underline">
-                Leggi l'articolo
-              </Link>
-              <Link href="/servizi/analisi-distribuzione" className="text-green-700 hover:underline">
-                Analisi Distribuzione
-              </Link>
-            </div>
-          </div>
-        </article>
-
-        <article className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="max-h-96 overflow-hidden rounded-lg">
-            <img 
-              src="/hero-verifica-cucina-800.jpeg"
-              alt="7 Verifiche tecniche prima di progettare"
-              className="w-full h-full object-cover"
-            />
-          </div>
-          <div>
-            <h2 className="text-3xl font-serif mb-4">
-              7 Verifiche tecniche prima di progettare la cucina
-            </h2>
-            <p className="text-gray-600 mb-6 leading-relaxed">
-              Scarichi, prese, fori cappa, ventilazione frigo. Le 7 quote che il mobiliere 
-              non controlla e che ti obbligano a interventi edili dopo la firma del contratto.
-            </p>
-            <Link href="/blog/verifiche-misure-progetto-cucina" className="text-green-700 text-sm hover:underline">
-              Leggi l'articolo
-            </Link>
-          </div>
-        </article>
+        <div className="flex justify-between items-end mb-12">
+          <h2 className="text-4xl font-serif font-bold">Guide Tecniche</h2>
+          <Link href="/blog" className="text-green-700 font-semibold hover:underline">
+            Vedi tutte →
+          </Link>
+        </div>
+        
+        <div className="grid md:grid-cols-2 gap-12">
+          {articoli.map((articolo, index) => (
+            <article key={articolo.slug} className={index < articoli.length - 1 ? 'pb-12 border-b' : ''}>
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="max-h-80 overflow-hidden rounded-lg">
+                  <img 
+                    src={articolo.immagine}
+                    alt={articolo.titolo}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div>
+                  <div className="text-xs text-green-700 font-semibold mb-2 uppercase">
+                    {articolo.categoria}
+                  </div>
+                  <h3 className="text-2xl font-serif font-bold mb-3">
+                    {articolo.titolo}
+                  </h3>
+                  <p className="text-gray-600 mb-6 leading-relaxed text-sm">
+                    {articolo.descrizione}
+                  </p>
+                  <div className="flex gap-6 text-sm">
+                    <Link 
+                      href={`/blog/${articolo.slug}`} 
+                      className="text-green-700 font-semibold hover:underline"
+                    >
+                      Leggi l'articolo →
+                    </Link>
+                    <Link 
+                      href="/servizi/check-up-progetto" 
+                      className="text-gray-600 hover:underline"
+                    >
+                      Check-up Progetto
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
       </section>
     </main>
   )
