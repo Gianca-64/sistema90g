@@ -1,10 +1,9 @@
- 'use client'
+'use client'
 
 import { useState, useEffect } from 'react'
-import { FileText, Phone, Plus, Search, X } from 'lucide-react'
+import { FileText, Phone, Plus, Search, X, FacebookIcon } from 'lucide-react'
 import { supabase } from '@/lib/supabase'
 import { useRouter } from 'next/navigation'
-import { FileText, Phone, Plus, Search, X, FacebookIcon } from 'lucide-react'
 type Caso = {
   id: number
   numero_pratica: string
