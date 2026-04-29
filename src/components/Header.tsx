@@ -2,20 +2,25 @@
 
 export default function Header() {
   return (
-    <header className="border-b border-gray-200">
-      <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-        <Link href="/" className="text-2xl font-bold">
-          Sistema<span className="text-blue-600">90G</span>
-        </Link>
-        <nav className="flex gap-6 items-center">
-          <Link href="/servizi" className="hover:text-blue-600">Servizi</Link>
-          <Link href="/blog" className="hover:text-blue-600">Blog</Link>
-          <Link 
-            href="/contatti" 
-            className="bg-black text-white px-5 py-2 rounded-lg font-semibold hover:bg-gray-800"
-          >
-            Contattami
-          </Link>
+    <header className="border-b border-gray-100">
+      <div className="max-w-7xl mx-auto px-6 py-8 flex justify-between items-start">
+        <div className="text-xs leading-tight">
+          <div>Consulenza Tecnica</div>
+          <div>Indipendente</div>
+        </div>
+        
+        <nav className="flex items-center gap-8 text-sm">
+          <Link href="/" className="hover:underline">Home</Link>
+          <Link href="/about" className="hover:underline">About</Link>
+          <Link href="/blog" className="hover:underline">Blog</Link>
+          <Link href="/contatti" className="hover:underline">Contatti</Link>
+          <button className="ml-4">
+            <svg width="20" height="14" viewBox="0 0 20 14" fill="none">
+              <rect width="20" height="2" fill="black"/>
+              <rect y="6" width="20" height="2" fill="black"/>
+              <rect y="12" width="20" height="2" fill="black"/>
+            </svg>
+          </button>
         </nav>
       </div>
     </header>
