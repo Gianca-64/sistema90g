@@ -66,7 +66,6 @@ export default function PaginaRisposta() {
       <RispostaActions 
         rispostaId={risposta.id}
         statoAttuale={risposta.stato_pubblicazione}
-        onStatoAggiornato={() => window.location.reload()}
       />
     </div>
   )
