@@ -1,6 +1,6 @@
  import Link from 'next/link'
 import type { Metadata } from 'next'
-import ServiziBox from '../../components/ServiziBox'
+import ServiziBox from '@/components/ServiziBox'
 
 export const metadata: Metadata = {
   title: 'Analisi Tecniche | Consulenza Indipendente Progetti e Distribuzione',
