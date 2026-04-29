@@ -60,7 +60,7 @@ export default async function Page({ params }: { params: { id: string } }) {
           <div className="border-t pt-6">
             <h2 className="text-lg font-semibold mb-4">Chat con Cliente</h2>
             <div className="bg-gray-50 p-4 rounded h-80 overflow-y-auto mb-4 space-y-3">
-              {messaggi.length > 0? messaggi.map((msg) => (
+              {messaggi.length > 0? messaggi.map((msg: any) => (
                 <div key={msg.id} className={`flex ${msg.mittente === 'umano'? 'justify-end' : 'justify-start'}`}>
                   <div className={`max-w-[75%] p-3 rounded-lg ${msg.mittente === 'umano'? 'bg-blue-600 text-white' : 'bg-white border'}`}>
                     <div className="text-xs mb-1">{msg.mittente === 'umano'? 'Tu' : 'Cliente'}</div>
