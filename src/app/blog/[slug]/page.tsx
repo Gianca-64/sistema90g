@@ -1,174 +1,130 @@
  import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import type { Metadata } from 'next'
 import ServiziBox from '@/components/ServiziBox'
 
-export const dynamic = 'force-static'
-export const dynamicParams = false
-
-const articoli = {
+const articles: Record<string, any> = {
   'errori-distribuzione-open-space-appartamento': {
-    titolo: 'Open space: 5 errori di distribuzione che costano 15.000€ di modifiche',
-    descrizione: 'Analisi tecnica dei 5 errori distributivi più frequenti nelle piante open space. Verifica flussi, norme disimpegno, scarichi e illuminazione prima di tracciare i muri.',
-    data: '29 Aprile 2026',
-    categoria: 'Distribuzione Interna',
-    readTime: '7 min',
-    img: '/hero-distribuzione-800.png',
-    servizio: 'Analisi Distribuzione 97€',
-    contenuto: `
-<p>
-In fase di analisi preventiva su 200+ piante, il 68% degli open space presenta almeno una criticità distributiva che emerge solo in cantiere. Il costo medio di modifica post-muri è 15.000€. Obiettivo di questa analisi: fornire check-list oggettiva prima di approvare l'esecutivo.
-</p>
-
-<h2>1. Errore flusso cucina-soggiorno</h2>
-<p><strong>Oggetto verifica:</strong> Distanza e ostacoli tra zona cottura e zona pranzo.</p>
-<p><strong>Soglia critica:</strong> Percorso >6 metri o con spigoli <90° da girare con piatti caldi.</p>
-<p><strong>Impatto:</strong> Usabilità quotidiana compromessa. Modifica tramezze: 4.000-7.000€.</p>
-<p><strong>Nota tecnica:</strong> Il triangolo lavoro deve restare entro 7 metri complessivi di perimetro.</p>
-
-<h2>2. Errore posizione colonna scarichi</h2>
-<img src="/pianta-scarichi.png" alt="Posizione scarichi open space" loading="lazy" />
-<p><strong>Oggetto verifica:</strong> Distanza cucina/bagni da colonna fecale esistente.</p>
-<p><strong>Soglia critica:</strong> Tratti orizzontali >4 metri richiedono pendenza che buca solai.</p>
-<p><strong>Impatto:</strong> Abbassamento controsoffitto o gradino. Adeguamento: 3.000-5.000€.</p>
-
-<h2>3. Errore rapporto aeroilluminante</h2>
-<p><strong>Oggetto verifica:</strong> Superficie finestrata / superficie pavimento zona giorno.</p>
-<p><strong>Norma:</strong> DM 1975: minimo 1/8. Milano: 1/8. Roma: 1/8. Verifica PGT locale.</p>
-<p><strong>Impatto:</strong> Mancata abitabilità. Apertura nuova finestra: 2.500-6.000€ + pratiche.</p>
-
-<h2>4. Errore corridoio cieco</h2>
-<p><strong>Oggetto verifica:</strong> Lunghezza disimpegno zona notte senza affaccio.</p>
-<p><strong>Soglia critica:</strong> >10 metri lineari = effetto tunnel, deprezzamento immobile.</p>
-<p><strong>Impatto:</strong> Modifica distribuzione per inserire luce. Ristrutturazione: 8.000-12.000€.</p>
-
-<h2>5. Errore interferenza pilastri-arredi</h2>
-<img src="/pilastro-cucina.png" alt="Pilastro interferenza cucina" loading="lazy" />
-<p><strong>Oggetto verifica:</strong> Posizione pilastri strutturali vs ingombro mobili previsti.</p>
-<p><strong>Soglia critica:</strong> Pilastro 30x30 in centro parete = perdita 2 basi da 60cm.</p>
-<p><strong>Impatto:</strong> Riduzione contenimento -20%. Soluzione su misura: 2.000-4.000€.</p>
-
-<hr class="my-12" />
-
-<h2>Metodologia di analisi distribuzione</h2>
-<p>L'analisi preventiva richiede:</p>
-<ul>
-<li>Pianta DWG/PDF quotata</li>
-<li>Indicazione posizione colonne tecniche esistenti</li>
-<li>Verifica incrociata norme nazionali + PGT comunale</li>
-<li>Simulazione flussi funzionali quotidiani</li>
-</ul>
-<p>Tempo analisi: 48h. Costo 97€ vs costo medio modifiche 15.000€.</p>
-    `,
-    faq: [
-      {
-        q: "Quando va fatta l'analisi distribuzione interna?",
-        a: "Dopo la prima bozza dell'architetto e prima di approvare il progetto esecutivo. Modificare DWG costa zero, spostare muri costa 3.000-8.000€."
-      },
-      {
-        q: "Serve il sopralluogo per analizzare la distribuzione?",
-        a: "No. L'analisi si basa su pianta DWG/PDF e posizione colonne tecniche. È una verifica documentale e normativa."
-      }
-    ]
+    title: 'Errori distribuzione open space: i 5 più costosi',
+    date: '28 Apr 2026',
+    content: `
+      <p>Un open space sbagliato costa 5.000€+ in modifiche post-rogito. Ecco i 5 errori che vedo ogni settimana.</p>
+      <h2>1. Pilastro in mezzo alla zona giorno</h2>
+      <p>Se il pilastro cade a 2,8m dalla parete, non ci sta tavolo + divano. Soluzione: verificare allineamenti prima di firmare.</p>
+      <h2>2. Scarico cucina troppo lontano dalla colonna</h2>
+      <p>Oltre 4m di distanza = pendenza insufficiente. Il mobilificio dice "si può fare", poi l'idraulico ti chiede 800€ per la pompa.</p>
+      <img src="/pilastro-cucina.jpeg" alt="Pilastro cucina" style="width:100%;margin:20px 0;border-radius:8px" />
+      <h2>3. Finestra che blocca la composizione</h2>
+      <p>Se la finestra è a 85cm da terra, non ci stanno basi cucina standard. Devi fare muretto o cambiare serramento: 1.200€.</p>
+      <h2>4. Frigo vicino al forno</h2>
+      <p>Il calore del forno fa lavorare di più il frigo. Consumi +15%. Distanza minima 60cm o pannello isolante.</p>
+      <img src="/problema-frigo.jpeg" alt="Frigo vicino forno" style="width:100%;margin:20px 0;border-radius:8px" />
+      <h2>5. Isola senza prese elettriche</h2>
+      <p>Fare le tracce dopo il pavimento costa 400€ a presa. Verificare predisposizioni prima del massetto.</p>
+    `
   },
-
-  'verifiche-misure-progetto-cucina': {
-    titolo: '7 Verifiche tecniche prima di confermare il progetto cucina',
-    descrizione: 'Check-list per validare quote, impianti e conformità norme UNI del progetto cucina prima dell\'ordine. Guida tecnica per committenti e progettisti.',
-    data: '27 Aprile 2026',
-    categoria: 'Verifica Progetto',
-    readTime: '8 min',
-    img: '/hero-verifica-cucina-800.png',
-    servizio: 'Check-up Progetto 147€',
-    contenuto: `
-<p>
-In fase di analisi pre-ordine, il 90% dei progetti cucina presenta almeno un punto da verificare su misure o impianti. L'obiettivo di questa check-list è fornire a committenti, architetti e rivenditori uno strumento di controllo oggettivo prima della conferma d'ordine.
-</p>
-
-<h2>1. Verifica squadro pareti</h2>
-<p><strong>Oggetto verifica:</strong> Scostamento angoli da 90° mediante squadra laser 50cm.</p>
-<p><strong>Soglia critica:</strong> Differenza >5mm tra inizio e fine parete.</p>
-<p><strong>Impatto:</strong> Basi modulari richiedono riduzione su misura. Costi di adeguamento post-montaggio: 800-1500€.</p>
-
-<h2>2. Verifica quota scarico lavastoviglie</h2>
-<img src="/problema-scarico.png" alt="Quota scarico lavastoviglie" loading="lazy" />
-<p><strong>Oggetto verifica:</strong> Altezza centro scarico da pavimento finito.</p>
-<p><strong>Norma:</strong> Schede tecniche: 400-450mm.</p>
-<p><strong>Impatto:</strong> Mancato svuotamento. Adeguamento idraulico: 600-900€.</p>
-
-<h2>3. Verifica distanza cappa-piano cottura gas</h2>
-<p><strong>Oggetto verifica:</strong> Distanza verticale bruciatori-filtro cappa.</p>
-<p><strong>Norma:</strong> UNI 7129: minimo 650mm per piani a gas.</p>
-<p><strong>Impatto:</strong> Non conformità impianto. Decadenza assicurazione. Adeguamento: 400-700€.</p>
-
-<h2>4. Verifica interferenza prese-elettrodomestici</h2>
-<p><strong>Oggetto verifica:</strong> Sporgenza frutti vs profondità nicchia.</p>
-<p><strong>Soglia critica:</strong> Presa schuko = 40mm. Se nicchia = 560mm, impedisce inserimento.</p>
-<p><strong>Impatto:</strong> Spostamento punto certificato: 250-400€.</p>
-
-<h2>5. Verifica spazio apertura frigorifero</h2>
-<img src="/problema-frigo.png" alt="Spazio apertura frigorifero" loading="lazy" />
-<p><strong>Oggetto verifica:</strong> Angolo apertura anta 110° senza interferenze.</p>
-<p><strong>Soglia critica:</strong> Parete a filo = impossibilità estrazione cassetti.</p>
-<p><strong>Impatto:</strong> Modifica colonna con distanziale: 500-800€.</p>
-
-<h2>6. Verifica planarità pavimento per zoccolo</h2>
-<p><strong>Oggetto verifica:</strong> Dislivello pavimento su lunghezza cucina.</p>
-<p><strong>Soglia critica:</strong> Dislivello >10mm = zoccolo H100mm non compensa.</p>
-<p><strong>Impatto:</strong> Zoccoli sagomati: 300-500€.</p>
-
-<h2>7. Verifica spazio tecnico colonna forno</h2>
-<p><strong>Oggetto verifica:</strong> Distanza laterale per apertura anta 110°.</p>
-<p><strong>Soglia critica:</strong> Minimo 50mm da parete laterale.</p>
-<p><strong>Impatto:</strong> Usura guarnizione. Sostituzione colonna: 800-1200€.</p>
-
-<hr class="my-12" />
-
-<p><strong>Nota distributiva:</strong> La verifica delle misure cucina è efficace solo se la distribuzione generale dell'appartamento è già stata validata. Errori su posizione pilastri o scarichi compromettono anche il miglior progetto.</p>
-    `,
-    faq: [
-      {
-        q: "Chi è responsabile se il progetto cucina ha errori di misura?",
-        a: "Una volta firmato il contratto di fornitura, la responsabilità delle quote approvate è del committente. Per questo è consigliata verifica tecnica terza prima della conferma d'ordine."
-      },
-      {
-        q: "Quanto costa verificare un progetto cucina?",
-        a: "Il servizio Check-up Progetto ha costo 147€. Include verifica quote, impianti e norme UNI con report PDF."
-      }
-    ]
+  'progetto-cucina-errori-verifica-tecnica': {
+    title: 'Progetto cucina: la verifica tecnica che il mobilificio non fa',
+    date: '27 Apr 2026',
+    content: `
+      <p>Il mobilificio ti fa il 3D, ma non verifica se tecnicamente si può fare. Risultato: firmi, versi acconto, poi scopri che l'idraulico chiede 1.500€ di extra.</p>
+      <h2>I 12 punti che controllo io a 97€</h2>
+      <ol>
+        <li>Distanza scarico da colonna < 4m</li>
+        <li>Pendenza scarico min 1%</li>
+        <li>Attacco gas presente e a norma UNI 7129</li>
+        <li>Prese elettriche dedicate per forno e induzione</li>
+        <li>Sezione cavi 6mm² per induzione >7kW</li>
+        <li>Salvavita dedicato 32A</li>
+        <li>Prese a 30cm da lavello: distanza sicurezza</li>
+        <li>Altezza finestra vs basi cucina</li>
+        <li>Ingombro apertura frigo vs muro</li>
+        <li>Spazio cappa: foro 150mm già presente?</li>
+        <li>Predisposizione lavastoviglie: carico + scarico</li>
+        <li>Fuori squadro pareti >2cm</li>
+      </ol>
+      <img src="/pianta-scarichi.jpeg" alt="Verifica scarichi" style="width:100%;margin:20px 0;border-radius:8px" />
+      <p>Se anche 1 solo punto è ko, il preventivo del mobilificio è carta straccia. Meglio saperlo prima.</p>
+    `
   },
+  'induzione-cucina-impianto-elettrico-casa': {
+    title: 'Induzione in cucina: quando l\'impianto non regge',
+    date: '26 Apr 2026',
+    content: `
+      <p>Il piano induzione da 7,4kW non funziona con il contatore da 3kW. Eppure te lo vendono lo stesso.</p>
+      <h2>Il calcolo che nessuno fa</h2>
+      <p>Contatore 3kW = 3.300W disponibili. Se accendi induzione a 5.000W + forno 2.000W + frigo 150W = 7.150W. Salta tutto.</p>
+      <h2>Soluzioni</h2>
+      <table style="width:100%;border-collapse:collapse;margin:20px 0">
+        <thead>
+          <tr style="border-bottom:2px solid #ddd">
+            <th style="text-align:left;padding:8px">Opzione</th>
+            <th style="text-align:left;padding:8px">Costo</th>
+            <th style="text-align:left;padding:8px">Pro/Contro</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid #eee">
+            <td style="padding:8px">Aumento a 4,5kW</td>
+            <td style="padding:8px">35€/mese fisso</td>
+            <td style="padding:8px">Ok per uso normale. Se accendi tutto salta comunque</td>
+          </tr>
+          <tr style="border-bottom:1px solid #eee">
+            <td style="padding:8px">Aumento a 6kW</td>
+            <td style="padding:8px">70€/mese fisso</td>
+            <td style="padding:8px">Sicuro. Ma paghi anche se non usi</td>
+          </tr>
+          <tr>
+            <td style="padding:8px">Induzione con limitatore</td>
+            <td style="padding:8px">+200€ sul piano</td>
+            <td style="padding:8px">Lo imposti a 3kW. Cuoci più lento ma non salta</td>
+          </tr>
+        </tbody>
+      </table> 
+      </table>
+      <img src="/hero-induzione-800.jpeg" alt="Piano induzione" style="width:100%;margin:20px 0;border-radius:8px" />
+      <p>Prima di firmare il mobilificio, chiedi: "L'induzione va a piena potenza col mio contatore?" Se non sanno rispondere, scappa.</p>
+    `
+  },
+  'camera-matrimoniale-misure-minime-normative': {
+    title: 'Camera matrimoniale: misure minime per non avere problemi',
+    date: '25 Apr 2026',
+    content: `
+      <p>Il DM 5 luglio 1975 dice: camera matrimoniale minimo 14mq. Ma non basta. Se sbagli distribuzione, non ci entra l'armadio.</p>
+      <h2>Regola del rettangolo 3x4,5m</h2>
+      <p>14mq può essere 2x7m = corridoio. Ti serve almeno 3m sul lato corto per letto 160cm + comodini 50cm + passaggio 60cm.</p>
+      <h2>Errori che bloccano il mutuo</h2>
+      <ol>
+        <li><strong>Finestra < 1/8 della superficie:</strong> 14mq = finestra min 1,75mq. Se è 1,5mq, la banca non eroga</li>
+        <li><strong>Altezza < 2,70m:</strong> Sottotetto a 2,50m = non è abitabile. Non puoi accatastarla come camera</li>
+        <li><strong>Pilastro nell'apertura armadio:</strong> Armadio 3m, ma a 2,8m c'è pilastro. Butti via 20cm o fai su misura +800€</li>
+      </ol>
+      <img src="/hero-camera-800.jpeg" alt="Camera matrimoniale" style="width:100%;margin:20px 0;border-radius:8px" />
+      <p>Prima di comprare casa o firmare il progetto, stampa la planimetria e disegna il letto in scala. Se non ci sta con 60cm per lato, quella non è una camera matrimoniale.</p>
+    `
+  }
+}
 
-  'induzione-vs-gas-verifiche-impianti': {
-    titolo: 'Piano induzione vs gas: verifiche tecniche su impianti e areazione',
-    descrizione: 'Analisi comparativa dei requisiti tecnici: potenza elettrica, sezione cavi, volume ambiente e canna fumaria. Cosa verificare prima di scegliere.',
-    data: '24 Aprile 2026',
-    categoria: 'Elettrodomestici',
-    readTime: '6 min',
-    img: '/hero-induzione-800.png',
-    servizio: 'Check-up Progetto 147€',
-    contenuto: `
-<p>
-La scelta tra induzione e gas non è estetica ma tecnica. Il 40% delle sostituzioni gas→induzione richiede adeguamento impianto elettrico. Il 30% delle installazioni gas non rispetta UNI 7129. Analisi oggettiva dei requisiti.
-</p>
+export default function ArticlePage({ params }: { params: { slug: string } }) {
+  const article = articles[params.slug]
+  if (!article) notFound()
+  
+  return (
+    <div style={{maxWidth:'1200px',margin:'0 auto',padding:'40px 20px',display:'grid',gridTemplateColumns:'1fr 320px',gap:'40px'}}>
+      <article>
+        <p style={{fontSize:'14px',color:'#666'}}>{article.date}</p>
+        <h1 style={{fontSize:'36px',lineHeight:'1.2',margin:'12px 0 32px'}}>{article.title}</h1>
+        <div dangerouslySetInnerHTML={{__html: article.content}} style={{fontSize:'18px',lineHeight:'1.7'}} />
+        <div style={{marginTop:'40px',padding:'24px',background:'#f0f9ff',borderLeft:'4px solid #0ea5e9',borderRadius:'4px'}}>
+          <p><strong>Hai un dubbio sul tuo progetto?</strong> Analisi tecnica indipendente da 97€. <Link href="https://wa.me/39TUONUMERO?text=Verifica progetto" style={{color:'#0ea5e9',fontWeight:'bold'}}>Scrivimi su WhatsApp</Link></p>
+        </div>
+      </article>
+      <aside>
+        <ServiziBox />
+      </aside>
+    </div>
+  )
+}
 
-<h2>Se scegli Induzione: verifiche elettriche</h2>
-<p><strong>Potenza richiesta:</strong> Piano 4 zone = 7,4 kW. Forno = 3,5 kW. Totale contemporaneo: 11 kW.</p>
-<p><strong>Verifica contatore:</strong> Standard 3 kW insufficiente. Serve aumento a 6 kW o 10 kW.</p>
-<p><strong>Verifica cavi:</strong> Linea dedicata minimo 6mm². Magnetotermico 32A. Se impianto ante 1990, probabile sezione 2,5mm² = non conforme.</p>
-<p><strong>Costo adeguamento:</strong> Aumento potenza + linea dedicata: 800-1.500€.</p>
-
-<h2>Se scegli Gas: verifiche areazione</h2>
-<p><strong>Volume ambiente:</strong> UNI 7129: minimo 20 m³ per cucina con piano gas. Open space 40 m² H2,7m = 108 m³ = ok.</p>
-<p><strong>Aperture ventilazione:</strong> Foro 100 cm² su parete esterna, H max 30cm da terra. Spesso mancante.</p>
-<p><strong>Distanza cappa:</strong> Minimo 650mm da bruciatori. Minore = non conforme, decadenza assicurazione.</p>
-<p><strong>Canna fumaria:</strong> Se presente cappa filtrante, serve comunque presa aria. Adeguamento: 400-900€.</p>
-
-<h2>Tabella comparativa verifiche</h2>
-<table class="w-full text-sm border-collapse my-8">
-<thead>
-<tr class="border-b border-slate-300">
-<th class="text-left py-2">Requisito</th>
-<th class="text-left py-2">Induzione</th>
-<th class="text-left py-2">Gas</th>
-</tr>
-</thead
+export async function generateStaticParams() {
+  return Object.keys(articles).map(slug => ({ slug }))
+}
