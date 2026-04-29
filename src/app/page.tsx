@@ -1,4 +1,5 @@
  import Link from 'next/link'
+import Image from 'next/image'
 
 const servizi = [
   {
@@ -121,7 +122,6 @@ export default function Home() {
         </p>
       </section>
 
-      {/* NUOVA SEZIONE SERVIZI */}
       <section className="bg-white py-16 border-b">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12">
@@ -167,12 +167,13 @@ export default function Home() {
           {articoli.map((articolo, index) => (
             <article key={articolo.slug} className={index < articoli.length - 1 ? 'pb-12 border-b' : ''}>
               <div className="grid md:grid-cols-2 gap-8 items-start">
-                <div className="h-64 overflow-hidden rounded-lg bg-gray-100">
-                  <img 
+                <div className="h-64 overflow-hidden rounded-lg bg-gray-100 relative">
+                  <Image 
                     src={articolo.immagine}
                     alt={articolo.titolo}
-                    className="w-full h-full object-cover"
-                    onError={(e) => { e.currentTarget.style.display = 'none' }}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
                 <div>
