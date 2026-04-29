@@ -1,8 +1,9 @@
  import Link from 'next/link'
+import Image from 'next/image'
 
 export const metadata = {
-  title: 'Add-on Capitolato Tecnico - Specifiche materiali e ferramenta',
-  description: 'Revisione capitolato cucina: verifico spessori, ferramenta, materiali e accessori inclusi. Add-on per chi ha già fatto il Check-up.'
+  title: 'Add-on Capitolato - Revisione materiali e ferramenta',
+  description: 'Revisione del capitolato cucina: spessori, ferramenta, maniglie, zoccolo. Add-on al Check-up Progetto per blindare i materiali.'
 }
 
 export default function AddOnCapitolato() {
@@ -12,78 +13,78 @@ export default function AddOnCapitolato() {
         <div className="max-w-4xl mx-auto px-6">
           <Link href="/servizi" className="text-sm text-gray-500 hover:underline mb-6 inline-block">← Tutti i servizi</Link>
           <div className="text-xs text-green-700 font-semibold mb-3 uppercase">ADD-ON</div>
-          <h1 className="text-5xl font-serif font-bold mb-4">Add-on Capitolato Tecnico</h1>
+          <h1 className="text-5xl font-serif font-bold mb-4">Add-on Capitolato</h1>
           <p className="text-xl text-gray-600 mb-8">
-            Revisione completa del capitolato: verifico materiali, ferramenta e accessori inclusi.
+            Revisione completa del capitolato materiali. Solo con Check-up Progetto.
           </p>
-          <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-8 text-sm">
-            <strong>Nota:</strong> Questo servizio è attivabile solo dopo Check-up Progetto 147€
-          </div>
           <Link 
             href="/contatti" 
             className="bg-green-700 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-800 inline-block"
           >
-            Aggiungi Capitolato 47€ →
+            Aggiungi Add-on Capitolato →
           </Link>
         </div>
       </section>
 
       <section className="max-w-5xl mx-auto px-6 -mt-10">
-        <div className="h-96 overflow-hidden rounded-lg bg-gray-100">
-          <img 
+        <div className="h-96 overflow-hidden rounded-lg bg-gray-100 relative">
+          <Image 
             src="/hero-capitolato-800.jpeg"
-            alt="Add-on Capitolato Tecnico"
-            className="w-full h-full object-cover"
+            alt="Add-on Capitolato"
+            fill
+            className="object-cover"
+            sizes="(max-width: 1024px) 100vw, 1024px"
+            priority
           />
         </div>
       </section>
 
       <section className="max-w-3xl mx-auto px-6 py-16">
-        <h2 className="text-3xl font-serif font-bold mb-8">Cosa verifico</h2>
-        <ul className="space-y-4 text-gray-700">
-          <li className="flex gap-3">
-            <span className="text-green-700 font-bold">✓</span>
-            Spessori pannelli, tipo laccatura, bordatura
-          </li>
-          <li className="flex gap-3">
-            <span className="text-green-700 font-bold">✓</span>
-            Marca cerniere e guide cassetti con ammortizzatore
-          </li>
-          <li className="flex gap-3">
-            <span className="text-green-700 font-bold">✓</span>
-            Materiale e spessore top, alzatina e lavorazioni
-          </li>
-          <li className="flex gap-3">
-            <span className="text-green-700 font-bold">✓</span>
-            Accessori inclusi: cestoni, faretti, zoccolatura
-          </li>
-          <li className="flex gap-3">
-            <span className="text-green-700 font-bold">✓</span>
-            Siliconatura, finiture e smaltimento imballi
-          </li>
-        </ul>
+        <h2 className="text-3xl font-serif font-bold mb-8">Cosa verifico nel capitolato</h2>
+        <div className="space-y-8">
+          <div>
+            <h3 className="text-xl font-bold mb-3 flex gap-3"><span className="text-green-700">✓</span>Spessori ante, fianchi e top</h3>
+            <p className="text-gray-700 leading-relaxed pl-8">
+              Controllo che siano specificati gli spessori reali: 18mm vs 22mm per ante, 3cm vs 4cm per top. 
+              Se non c'è scritto, ti dico cosa chiedere al mobiliere per evitare sorprese al montaggio.
+            </p>
+          </div>
+          <div>
+            <h3 className="text-xl font-bold mb-3 flex gap-3"><span className="text-green-700">✓</span>Ferramenta: guide e cerniere</h3>
+            <p className="text-gray-700 leading-relaxed pl-8">
+              Verifico marca e modello di guide cassetti e cerniere. Controllo che siano ammortizzate ed estrazione totale. 
+              Se il capitolato dice solo "ferramenta di serie", ti indico cosa farti scrivere per esteso.
+            </p>
+          </div>
+          <div>
+            <h3 className="text-xl font-bold mb-3 flex gap-3"><span className="text-green-700">✓</span>Zoccolo, maniglie e finiture</h3>
+            <p className="text-gray-700 leading-relaxed pl-8">
+              Controllo materiale zoccolo, altezza, tipologia maniglie, profili di finitura. 
+              Verifico che siliconatura top-parete e smaltimento imballi siano inclusi nel montaggio.
+            </p>
+          </div>
+          <div>
+            <h3 className="text-xl font-bold mb-3 flex gap-3"><span className="text-green-700">✓</span>Voci escluse e sovrapprezzi</h3>
+            <p className="text-gray-700 leading-relaxed pl-8">
+              Evidenzio tutte le voci "escluso" e "opzionale". Ti dico cosa integrare prima della firma 
+              per evitare preventivi che lievitano del 20% in corso d'opera.
+            </p>
+          </div>
+        </div>
       </section>
 
       <section className="bg-gray-50 py-16">
         <div className="max-w-3xl mx-auto px-6">
           <h2 className="text-3xl font-serif font-bold mb-8">Cosa ricevi</h2>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            Documento PDF con analisi voce per voce del capitolato. Ti indico cosa manca e cosa farti integrare prima della firma.
-          </p>
-          <p className="text-gray-700 leading-relaxed">
-            Consegna in 48 ore lavorative dall'invio del capitolato.
-          </p>
+          <div className="bg-white border border-gray-200 rounded-lg p-8">
+            <ul className="space-y-4 text-gray-700">
+              <li className="flex gap-3"><span className="text-green-700 font-bold">→</span><div><strong>Report capitolato annotato</strong> con richieste di integrazione</div></li>
+              <li className="flex gap-3"><span className="text-green-700 font-bold">→</span><div><strong>Lista voci mancanti</strong> da farti scrivere prima della firma</div></li>
+              <li className="flex gap-3"><span className="text-green-700 font-bold">→</span><div><strong>Confronto specifiche</strong> tra preventivo e standard di mercato</div></li>
+            </ul>
+            <p className="text-gray-600 mt-6 text-sm">Disponibile solo con Check-up Progetto. Consegna insieme al Check-up.</p>
+          </div>
         </div>
-      </section>
-
-      <section className="max-w-3xl mx-auto px-6 py-16 text-center">
-        <h2 className="text-3xl font-serif font-bold mb-6">Firma con capitolato chiaro</h2>
-        <Link 
-          href="/contatti" 
-          className="bg-green-700 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-800 inline-block"
-        >
-          Aggiungi Capitolato 47€ →
-        </Link>
       </section>
     </main>
   )
