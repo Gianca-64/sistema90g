@@ -1,67 +1,88 @@
-import Image from 'next/image'
-import Link from 'next/link'
+ import Link from 'next/link'
 
 export const metadata = {
-  title: 'Blindatura Progetto 297€ - Progetto Esecutivo Cucina per Cantiere | Sistema90G',
-  description: 'Trasformiamo il preventivo del mobiliere in progetto esecutivo per muratore ed elettricista. Quote, impianti, schemi. Zero interpretazioni. Da 297€.',
-  keywords: 'progetto esecutivo cucina, blindatura progetto, schemi impianti cucina, disegni per muratore, progetto tecnico cucina, 297 euro',
+  title: 'Blindatura Contratto - Revisione clausole tecniche',
+  description: 'Revisione contratto cucina: controllo penali, tempi di consegna, esclusioni e modifiche in corso d\'opera. Analisi tecnica delle clausole.'
 }
+
 export default function Blindatura() {
   return (
-    <main className="max-w-4xl mx-auto px-4 py-12">
-      <div className="mb-8">
-        <Link href="/" className="text-sm text-gray-500 hover:text-gray-700">
-          ← Torna alla Home
-        </Link>
-      </div>
-
-      <h1 className="text-4xl font-bold mb-4">
-        Blindatura Contratto: Analisi Legale 297€
-      </h1>
-      
-      <Image 
-        src="/servizi/blindatura-hero.jpg" 
-        alt="Revisione contratto cucina con evidenziatore su clausole critiche"
-        width={1200} 
-        height={600}
-        className="rounded-lg mb-8"
-        priority
-      />
-
-      <div className="prose prose-lg max-w-none">
-        <p className="text-xl text-gray-700 mb-6">
-          Stai per firmare 15-30k€ di contratto. Se c'è una clausola trappola, sono soldi tuoi che volano via. Io la trovo prima.
-        </p>
-
-        <h2>Cosa controllo nel contratto</h2>
-        <ul>
-          <li><strong>Penali e recessi:</strong> Se disdici paghi quanto? Se ritardano loro pagano quanto?</li>
-          <li><strong>Tempi e consegne:</strong> "90 giorni lavorativi" vuol dire 5 mesi. Ti spiego cosa firmi davvero.</li>
-          <li><strong>Garanzie:</strong> 24 mesi su cosa? Solo mobili o anche montaggio? E chi paga se si rompe?</li>
-          <li><strong>Modifiche in corso:</strong> Puoi cambiare colore dopo? A che costo? Se non c'è scritto, non puoi.</li>
-        </ul>
-
-        <h2>Cosa ricevi</h2>
-        <p>
-          Report legale di 6-10 pagine. Ogni clausola critica evidenziata + traduzione in italiano semplice. 
-          Ti dico: "questa firmala", "questa falla togliere", "questa negoziala così". 
-          In 72h sai esattamente dove stai mettendo i soldi.
-        </p>
-
-        <div className="bg-red-50 border-l-4 border-red-400 p-6 my-8">
-          <p className="font-semibold">Quando farlo:</p>
-          <p>Prima di versare l'acconto. Dopo che hai firmato è tardi: vale quello che c'è scritto, anche se è una fregatura.</p>
-        </div>
-
-        <div className="mt-10">
+    <main>
+      <section className="bg-gray-50 py-20 text-center">
+        <div className="max-w-4xl mx-auto px-6">
+          <Link href="/servizi" className="text-sm text-gray-500 hover:underline mb-6 inline-block">← Tutti i servizi</Link>
+          <div className="text-xs text-green-700 font-semibold mb-3 uppercase">SERVIZIO TECNICO</div>
+          <h1 className="text-5xl font-serif font-bold mb-4">Blindatura Contratto</h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Revisione contratto cucina: controllo penali, tempi e clausole tecniche prima della firma.
+          </p>
           <Link 
             href="/contatti" 
-            className="inline-block bg-black text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-800"
+            className="bg-green-700 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-800 inline-block"
           >
-            Blinda il Contratto 297€ →
+            Richiedi Blindatura 297€ →
           </Link>
         </div>
-      </div>
+      </section>
+
+      <section className="max-w-5xl mx-auto px-6 -mt-10">
+        <div className="h-96 overflow-hidden rounded-lg bg-gray-100">
+          <img 
+            src="/hero-contratto-800.jpeg"
+            alt="Blindatura Contratto"
+            className="w-full h-full object-cover"
+          />
+        </div>
+      </section>
+
+      <section className="max-w-3xl mx-auto px-6 py-16">
+        <h2 className="text-3xl font-serif font-bold mb-8">Cosa verifico</h2>
+        <ul className="space-y-4 text-gray-700">
+          <li className="flex gap-3">
+            <span className="text-green-700 font-bold">✓</span>
+            Clausola esclusioni: cosa è incluso nel prezzo
+          </li>
+          <li className="flex gap-3">
+            <span className="text-green-700 font-bold">✓</span>
+            Penali per ritardo: reciproche e proporzionate
+          </li>
+          <li className="flex gap-3">
+            <span className="text-green-700 font-bold">✓</span>
+            Tempi di consegna e definizioni contrattuali
+          </li>
+          <li className="flex gap-3">
+            <span className="text-green-700 font-bold">✓</span>
+            Clausola modifiche tecniche in corso d'opera
+          </li>
+          <li className="flex gap-3">
+            <span className="text-green-700 font-bold">✓</span>
+            Garanzie su mobili e montaggio
+          </li>
+        </ul>
+      </section>
+
+      <section className="bg-gray-50 py-16">
+        <div className="max-w-3xl mx-auto px-6">
+          <h2 className="text-3xl font-serif font-bold mb-8">Cosa ricevi</h2>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Report di revisione con clausole critiche evidenziate e suggerimenti di modifica. 
+            Include Check-up Progetto completo + 2 call di supporto fino alla firma.
+          </p>
+          <p className="text-gray-700 leading-relaxed">
+            Consegna in 72 ore lavorative dall'invio del contratto.
+          </p>
+        </div>
+      </section>
+
+      <section className="max-w-3xl mx-auto px-6 py-16 text-center">
+        <h2 className="text-3xl font-serif font-bold mb-6">Firma con clausole chiare</h2>
+        <Link 
+          href="/contatti" 
+          className="bg-green-700 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-800 inline-block"
+        >
+          Richiedi Blindatura 297€ →
+        </Link>
+      </section>
     </main>
   )
 }
