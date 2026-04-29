@@ -20,9 +20,9 @@ export default async function Page({ params }: { params: { id: string } }) {
   if (error || !caso) return notFound()
 
   const risposta = caso.risposte_ai?.[0]
-  const messaggi = (caso.chat_messaggi || []).sort((a, b) =>
-    new Date(a.data_invio).getTime() - new Date(b.data_invio).getTime()
-  )
+  const messaggi = (caso.chat_messaggi || []).sort((a: any, b: any) => 
+  new Date(a.data_invio).getTime() - new Date(b.data_invio).getTime()
+)
   const inviaMessaggioConId = inviaMessaggio.bind(null, params.id)
 
   return (
