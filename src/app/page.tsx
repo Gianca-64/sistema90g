@@ -11,9 +11,9 @@
       <section className="max-w-7xl mx-auto px-6 py-16">
         <article className="grid md:grid-cols-2 gap-12 mb-16 pb-16 border-b">
           <img 
-            src="/progetto-cucina.jpg" 
-            alt="Progetto cucina"
-            className="w-full h-auto"
+            src="/distribuzione-hero.jpeg"
+            alt="Open space: errori di distribuzione"
+            className="w-full h-auto rounded-lg"
           />
           <div>
             <h2 className="text-3xl font-serif mb-4">
@@ -31,15 +31,22 @@
           </div>
         </article>
 
-        <article className="mb-16">
-          <h2 className="text-3xl font-serif mb-4">
-            7 Verifiche tecniche prima di progettare la cucina
-          </h2>
-          <p className="text-gray-600 mb-6 leading-relaxed">
-            Prima di cucine, elettrodomestici e ante: le verifiche tecniche che 
-            anticipano i problemi e bloccano le richieste di modifica costose.
-          </p>
-          <span className="text-green-700 text-sm">Leggi l'articolo</span>
+        <article className="grid md:grid-cols-2 gap-12">
+          <img 
+            src="/progetto-zero-hero.jpeg"
+            alt="7 Verifiche tecniche prima di progettare"
+            className="w-full h-auto rounded-lg"
+          />
+          <div>
+            <h2 className="text-3xl font-serif mb-4">
+              7 Verifiche tecniche prima di progettare la cucina
+            </h2>
+            <p className="text-gray-600 mb-6 leading-relaxed">
+              Prima di cucine, elettrodomestici e ante: le verifiche tecniche che 
+              anticipano i problemi e bloccano le richieste di modifica costose.
+            </p>
+            <span className="text-green-700 text-sm">Leggi l'articolo</span>
+          </div>
         </article>
       </section>
     </main>
