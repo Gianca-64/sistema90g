@@ -100,14 +100,14 @@ export default function OpenSpaceErrori() {
         </p>
 
         <div className="bg-gray-50 p-8 rounded-lg my-12 not-prose">
-          <h3 className="text-xl font-semibold mb-4">Servizio: Analisi Distribuzione Open Space</h3>
+          <h3 className="text-xl font-semibold mb-4">Servizio: Analisi Distribuzione</h3>
           <p className="mb-6">
             Analizzo la pianta del tuo open space prima dell'inizio lavori. Verifico flussi, triangoli 
             di lavoro, passaggi minimi e orientamenti funzionali. Consegno elaborato grafico quotato 
             con le correzioni da apportare al progetto.
           </p>
           <div className="flex items-center gap-6">
-            <span className="text-3xl font-bold">97€</span>
+            <span className="text-3xl font-bold">Analisi Distribuzione</span>
             <Link 
               href="/servizi/distribuzione-cucina"
               className="bg-green-700 text-white px-6 py-3 rounded-lg hover:bg-green-800 font-semibold"

@@ -112,13 +112,13 @@ export default function VerificheCucina() {
         </p>
 
         <div className="bg-gray-50 p-8 rounded-lg my-12 not-prose">
-          <h3 className="text-xl font-semibold mb-4">Servizio: Check-up Tecnico Progetto</h3>
+          <h3 className="text-xl font-semibold mb-4">Servizio: Check-up Progetto</h3>
           <p className="mb-6">
             Vengo in cantiere o analizzo le tue foto e planimetrie. Verifico tutte le 7 quote e ti consegno 
             relazione con correzioni da dare al mobiliere. Usala con qualsiasi fornitore.
           </p>
           <div className="flex items-center gap-6">
-            <span className="text-3xl font-bold">147€</span>
+            <span className="text-3xl font-bold">Check-up Progetto</span>
             <Link 
               href="/servizi/check-up-cucina"
               className="bg-green-700 text-white px-6 py-3 rounded-lg hover:bg-green-800 font-semibold"

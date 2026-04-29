@@ -75,7 +75,7 @@ export default function RevisioneContratto() {
             + 2 call di supporto fino alla firma.
           </p>
           <div className="flex items-center gap-6">
-            <span className="text-3xl font-bold">297€</span>
+            <span className="text-3xl font-bold">Blindatura Contratto</span>
             <Link 
               href="/servizi/blindatura"
               className="bg-green-700 text-white px-6 py-3 rounded-lg hover:bg-green-800 font-semibold"
@@ -83,7 +83,6 @@ export default function RevisioneContratto() {
               Scopri il servizio →
             </Link>
           </div>
-          <p className="text-xs text-gray-500 mt-3">Include Check-up Progetto 147€</p>
         </div>
 
         <p>

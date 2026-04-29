@@ -73,7 +73,7 @@ export default function CapitolatoCucina() {
             Ti dico cosa manca e cosa farti integrare prima della firma.
           </p>
           <div className="flex items-center gap-6">
-            <span className="text-3xl font-bold">47€</span>
+            <span className="text-3xl font-bold">Add-on Capitolato</span>
             <Link 
               href="/servizi/add-on-capitolato"
               className="bg-green-700 text-white px-6 py-3 rounded-lg hover:bg-green-800 font-semibold"

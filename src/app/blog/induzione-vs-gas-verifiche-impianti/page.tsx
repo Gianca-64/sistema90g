@@ -61,7 +61,7 @@ export default function InduzioneGas() {
             Analizzo impianto elettrico, gas e volumi. Ti dico cosa installare senza rischi e senza modifiche dopo.
           </p>
           <div className="flex items-center gap-6">
-            <span className="text-3xl font-bold">147€</span>
+            <span className="text-3xl font-bold">Check-up Progetto</span>
             <Link 
               href="/servizi/check-up-cucina"
               className="bg-green-700 text-white px-6 py-3 rounded-lg hover:bg-green-800 font-semibold"

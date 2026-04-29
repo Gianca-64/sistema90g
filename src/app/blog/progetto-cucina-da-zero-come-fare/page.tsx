@@ -60,7 +60,7 @@ export default function ProgettoDaZero() {
             Parti da zero? Progetto la cucina con te. Sopralluogo + 3D + capitolato + distinta elettrodomestici.
           </p>
           <div className="flex items-center gap-6">
-            <span className="text-3xl font-bold">890€</span>
+            <span className="text-3xl font-bold">Progetto da Zero</span>
             <Link 
               href="/servizi/progetto-da-zero"
               className="bg-green-700 text-white px-6 py-3 rounded-lg hover:bg-green-800 font-semibold"
