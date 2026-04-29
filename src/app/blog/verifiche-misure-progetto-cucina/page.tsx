@@ -1,112 +1,131 @@
  import Link from 'next/link'
-import Image from 'next/image'
 
 export const metadata = {
-  title: '7 Verifiche misure progetto cucina prima di firmare | Check-up 147€',
-  description: 'Frigo che non entra, cassetti che sbattono, piano troppo basso. Le 7 misure che il mobilificio deve darti per iscritto prima della firma.'
+  title: '7 Verifiche tecniche prima di progettare la cucina',
+  description: 'Checklist tecnica: 7 controlli su impianti, misure e vincoli da fare prima di firmare il progetto cucina. Evita modifiche edili in cantiere.'
 }
 
-export default function Articolo() {
+export default function VerificheCucina() {
   return (
-    <div className="max-w-6xl mx-auto px-6 py-12 md:py-16">
-      <div className="grid lg:grid-cols-3 gap-12">
-        
-        <article className="lg:col-span-2">
-          <Link href="/blog" className="text-green-700 text-sm mb-6 inline-block hover:underline">← Torna al blog</Link>
-          <p className="text-sm text-slate-500 mb-2">Verifica Progetto · 27 Aprile 2026 · 8 min</p>
-          <h1 className="text-4xl md:text-5xl font-serif font-bold mb-8 leading-tight">
-            7 Verifiche misure progetto cucina prima di firmare
-          </h1>
-          
-          <div className="prose prose-lg max-w-none prose-headings:font-serif prose-headings:font-bold prose-p:leading-relaxed">
-            <p className="text-lg leading-relaxed mb-6">
-              Il progetto sembra perfetto sul disegno. Poi arriva il montaggio e il frigo non entra di 2cm. 
-              <strong> Errore medio: 5.000€ di modifiche post-montaggio.</strong>
-            </p>
-            <p className="mb-8">
-              Fai queste 7 verifiche PRIMA di dare l'ok al mobilificio. Ti salvano da errori che scopri solo quando è troppo tardi.
-            </p>
-            
-            <h2>1. Misura i fuorisquadro reali del vano</h2>
-            <p>
-              I muri non sono mai a 90°. Se il mobile è preciso al mm senza tolleranza, non entra. 
-              <strong>Lascia 2cm di agio per lato.</strong> Il mobilificio deve rilevare i fuorisquadro, non tu.
-            </p>
-            
-            <h2>2. Controlla scarichi e attacchi esistenti</h2>
-            <p>
-              Gas, acqua calda/fredda e scarico lavello devono stare dove dice il progetto. 
-              Spostare lo scarico dopo il massetto costa <strong>800€ + piastrellista.</strong>
-            </p>
-
-            <h2>3. Verifica altezza finestra vs piano lavoro</h2>
-            <p>
-              Se la finestra apre a 85cm e il top è a 90cm, l'anta non apre. O alzi il top o cambi finestra: 
-              <strong>1.200€ di modifica.</strong>
-            </p>
-
-            <h2>4. Conta le prese elettriche reali</h2>
-            <p>
-              Servono minimo 6 prese: frigo, forno, lavastoviglie, cappa, piano lavoro x2. 
-              Il mobilificio ne predispone 2. Aggiungerle dopo: <strong>220€ a presa + muratore.</strong>
-            </p>
-
-            <h2>5. Misura profondità colonne frigo/forno</h2>
-            <p>
-              Il frigo sporge 5cm, il forno 3cm. La colonna deve essere 60cm + spessore anta + aria. 
-              Altrimenti l'elettrodomestico sporge e rovina l'estetica.
-            </p>
-
-            <h2>6. Verifica distanza cappa da piano cottura</h2>
-            <p>
-              Minimo 65cm per gas, 50cm per induzione secondo UNI 7129. Se è più bassa, 
-              <strong>non passa il collaudo e perdi la garanzia.</strong>
-            </p>
-
-            <h2>7. Controlla aperture complete elettrodomestici</h2>
-            <p>
-              Frigo, lavastoviglie e forno devono aprire al 100% senza sbattere su muro, isola o altre ante. 
-              Prova con sagoma in cartone prima di firmare.
-            </p>
-          </div>
-        </article>
-
-        <aside className="lg:col-span-1">
-          <div className="sticky top-24 bg-green-50 border-2 border-green-200 rounded-xl p-6">
-            <p className="text-xs font-semibold text-green-700 mb-2">LIVELLO 2 CUCINA</p>
-            <h3 className="font-bold text-xl mb-3">Check-up 147€</h3>
-            <p className="text-sm text-slate-700 mb-4">
-              Hai già il progetto? Controllo 12 quote critiche in 48h. Report PDF + lista modifiche per il mobilificio + call 30min.
-            </p>
-            <Link 
-              href="/servizi/check-up-cucina"
-              className="block w-full bg-green-700 text-white text-center py-3 rounded-lg font-semibold hover:bg-green-800 transition"
-            >
-              Attiva Check-up 147€
-            </Link>
-            <p className="text-xs text-slate-500 mt-3">Risposta in 48h</p>
-          </div>
-
-          <div className="mt-8">
-            <h4 className="font-bold mb-4">Altri articoli</h4>
-            <div className="space-y-4">
-              <Link href="/blog/errori-distribuzione-open-space-appartamento" className="block group">
-                <p className="text-sm font-semibold text-green-700">LIVELLO 1</p>
-                <p className="text-sm group-hover:text-green-700 transition">
-                  Open space: 5 errori di distribuzione che costano 13.000€ dopo il rogito
-                </p>
-              </Link>
-              <Link href="/blog/induzione-vs-gas-verifiche-impianti" className="block group">
-                <p className="text-sm font-semibold text-green-700">LIVELLO 2 CUCINA</p>
-                <p className="text-sm group-hover:text-green-700 transition">
-                  Piano induzione: serve aumentare il contatore? Verifica prima di scegliere
-                </p>
-              </Link>
-            </div>
-          </div>
-        </aside>
-
+    <main className="max-w-3xl mx-auto px-6 py-16">
+      <div className="mb-4">
+        <Link href="/" className="text-sm text-gray-500 hover:underline">← Home</Link>
       </div>
-    </div>
+
+      <article className="prose prose-lg prose-gray">
+        <h1 className="mb-6">7 Verifiche tecniche prima di progettare la cucina</h1>
+        
+        <img 
+          src="/blog/verifiche-cucina.jpg" 
+          alt="Schema verifiche tecniche progetto cucina"
+          className="w-full h-auto rounded-lg my-8"
+        />
+
+        <p className="lead">
+          Prima di firmare il progetto del mobiliere, fai queste 7 verifiche. 
+          Ti evitano demolizioni, spostamenti impianti e contenziosi dopo la consegna.
+        </p>
+
+        <h2>1. Posizione e quota scarico lavello</h2>
+        <p>
+          <strong>Cosa verificare:</strong> Il centro dello scarico a muro deve coincidere con il centro 
+          del lavello in progetto. Altezza standard: 50-55cm da pavimento finito. Diametro tubo: 40-50mm.
+        </p>
+        <p>
+          <strong>Se sbagli:</strong> devi rompere il rivestimento, spostare il tubo nel muro, 
+          rifare intonaco e piastrelle.
+        </p>
+
+        <h2>2. Prese elettriche piano cottura e forno</h2>
+        <p>
+          <strong>Cosa verificare:</strong> Piano a induzione: linea dedicata da 32A sotto il top, non dietro. 
+          Forno: presa Schuko dedicata da 16A. Norma CEI 64-8 vieta prese dietro fonti di calore.
+        </p>
+        <p>
+          <strong>Se sbagli:</strong> l'elettricista deve aggiungere linee nuove. Significa tracce a muro, 
+          tinteggiatura, polvere. Impianto non a norma = garanzia elettrodomestici invalidata.
+        </p>
+
+        <h2>3. Foro scarico cappa: diametro e posizione</h2>
+        <p>
+          <strong>Cosa verificare:</strong> Cappa aspirante moderna richiede foro da 150mm. 
+          Verifica che esista e che sia nel raggio di 2m dal piano cottura. Se va a soffitto, 
+          controlla che sopra non ci siano travi o impianti.
+        </p>
+        <p>
+          <strong>Se sbagli:</strong> carotaggio solaio non previsto o sistema a ricircolo obbligato. 
+          Il ricircolo ha resa inferiore e filtri a carbone da sostituire ogni 3-6 mesi.
+        </p>
+
+        <h2>4. Spazi di ventilazione frigorifero</h2>
+        <p>
+          <strong>Cosa verificare:</strong> Frigorifero a colonna o americano richiede 5cm liberi sopra 
+          e dietro per dissipazione calore. Controlla la scheda tecnica del modello scelto.
+        </p>
+        <p>
+          <strong>Se sbagli:</strong> il motore lavora sotto sforzo, consuma di più e si rompe prima. 
+          La garanzia non copre installazione non conforme.
+        </p>
+
+        <h2>5. Altezza piano di lavoro rispetto a chi cucina</h2>
+        <p>
+          <strong>Cosa verificare:</strong> Standard 90cm. Ma ergonomia dice: altezza gomito - 10cm. 
+          Per persone 1,60m → 85cm. Per 1,90m → 95-100cm. Misura chi cucina di più.
+        </p>
+        <p>
+          <strong>Se sbagli:</strong> dolori a schiena e spalle ogni giorno. Modificare dopo significa 
+          buttare top, zoccoli e fianchi laterali.
+        </p>
+
+        <h2>6. Apertura ante e cassetti vs ingombri</h2>
+        <p>
+          <strong>Cosa verificare:</strong> Simula l'apertura di ogni anta. Controlla che non sbatta contro 
+          muro, calorifero, finestra, tavolo. Cassetti sotto al piano cottura: verificano interferenza 
+          con il forno sotto.
+        </p>
+        <p>
+          <strong>Se sbagli:</strong> ante che si rovinano o non si aprono completamente. Cassetti inutilizzabili. 
+          Modifica = rifare il modulo.
+        </p>
+
+        <h2>7. Punti acqua lavastoviglie e quote allacci</h2>
+        <p>
+          <strong>Cosa verificare:</strong> La lavastoviglie vuole carico e scarico acqua entro 1,5m dal 
+          lavello. Altezza scarico: 40-80cm da terra. Presa elettrica: separata e accessibile.
+        </p>
+        <p>
+          <strong>Se sbagli:</strong> tubi di prolunga a vista, scarico che non pesca, allagamenti. 
+          Spostare gli attacchi = rompere il muro dietro i mobili.
+        </p>
+
+        <h2>Come fare le verifiche</h2>
+        <p>
+          Ti servono: metro laser, livella, progetto quotato del mobiliere, schede tecniche elettrodomestici. 
+          Vai in casa con un tecnico prima di firmare. 2 ore ti salvano il cantiere.
+        </p>
+
+        <div className="bg-gray-50 p-8 rounded-lg my-12 not-prose">
+          <h3 className="text-xl font-semibold mb-4">Servizio: Check-up Tecnico Progetto</h3>
+          <p className="mb-6">
+            Vengo in cantiere o analizzo le tue foto e planimetrie. Verifico tutte le 7 quote e ti consegno 
+            relazione con correzioni da dare al mobiliere. Usala con qualsiasi fornitore.
+          </p>
+          <div className="flex items-center gap-6">
+            <span className="text-3xl font-bold">Da 147€</span>
+            <a 
+              href="https://wa.me/393275478485?text=Voglio%20il%20Check-up%20Tecnico%20per%20la%20cucina"
+              className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700"
+            >
+              Prenota su WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <p>
+          <strong>Gian Carlo Primo</strong><br/>
+          Tecnico indipendente. Non vendo cucine. Verifico che il progetto entri in casa tua senza sorprese.
+        </p>
+      </article>
+    </main>
   )
 }
