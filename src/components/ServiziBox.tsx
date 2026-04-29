@@ -1,4 +1,4 @@
-import Link from 'next/link'
+ import Link from 'next/link'
 
 export default function ServiziBox() {
   return (
@@ -10,7 +10,8 @@ export default function ServiziBox() {
         </p>
         <div className="text-3xl font-bold text-blue-600 mb-4">97€</div>
         <Link 
-          href="https://wa.me/39TUONUMERO?text=Analisi tecnica 97€" 
+          href="https://wa.me/393275478485?text=Analisi%20tecnica%2097%E2%82%AC" 
+          target="_blank"
           className="block w-full text-center bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700"
         >
           Richiedi su WhatsApp
@@ -25,7 +26,8 @@ export default function ServiziBox() {
         </p>
         <div className="text-3xl font-bold text-slate-900 mb-4">147€</div>
         <Link 
-          href="https://wa.me/3932754784855text=Progetto cucina 147€" 
+          href="https://wa.me/393275478485?text=Progetto%20cucina%20147%E2%82%AC" 
+          target="_blank"
           className="block w-full text-center bg-slate-900 text-white py-3 rounded-lg font-semibold hover:bg-slate-800"
         >
           Richiedi su WhatsApp
