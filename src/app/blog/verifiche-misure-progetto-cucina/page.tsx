@@ -1,4 +1,5 @@
  import Link from 'next/link'
+import Image from 'next/image'
 
 export const metadata = {
   title: '7 Verifiche tecniche prima di progettare la cucina',
@@ -9,17 +10,23 @@ export default function VerificheCucina() {
   return (
     <main className="max-w-3xl mx-auto px-6 py-16">
       <div className="mb-4">
-        <Link href="/" className="text-sm text-gray-500 hover:underline">← Home</Link>
+        <Link href="/blog" className="text-sm text-gray-500 hover:underline">← Blog</Link>
       </div>
 
       <article className="prose prose-lg prose-gray">
+        <div className="text-xs text-green-700 font-semibold mb-2 uppercase">VERIFICA PROGETTO</div>
         <h1 className="mb-6">7 Verifiche tecniche prima di progettare la cucina</h1>
         
-        <img 
-          src="/blog/verifiche-cucina.jpg" 
-          alt="Schema verifiche tecniche progetto cucina"
-          className="w-full h-auto rounded-lg my-8"
-        />
+        <div className="relative w-full h-96 rounded-lg overflow-hidden my-8 not-prose">
+          <Image 
+            src="/hero-verifica-cucina-800.jpeg" 
+            alt="Schema verifiche tecniche progetto cucina"
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 768px"
+            priority
+          />
+        </div>
 
         <p className="lead">
           Prima di firmare il progetto del mobiliere, fai queste 7 verifiche. 
@@ -111,13 +118,13 @@ export default function VerificheCucina() {
             relazione con correzioni da dare al mobiliere. Usala con qualsiasi fornitore.
           </p>
           <div className="flex items-center gap-6">
-            <span className="text-3xl font-bold">Da 147€</span>
-            <a 
-              href="https://wa.me/393275478485?text=Voglio%20il%20Check-up%20Tecnico%20per%20la%20cucina"
-              className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700"
+            <span className="text-3xl font-bold">147€</span>
+            <Link 
+              href="/servizi/check-up-cucina"
+              className="bg-green-700 text-white px-6 py-3 rounded-lg hover:bg-green-800 font-semibold"
             >
-              Prenota su WhatsApp
-            </a>
+              Scopri il servizio →
+            </Link>
           </div>
         </div>
 
