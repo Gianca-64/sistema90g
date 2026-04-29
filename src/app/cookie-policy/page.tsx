@@ -1,58 +1,50 @@
-import Link from 'next/link'
-
-export const metadata = {
-  title: 'Cookie Policy - Sistema90G',
-}
-
-export default function CookiePolicyPage() {
+ export default function CookiePolicy() {
   return (
-    <main className="max-w-3xl mx-auto px-4 py-12">
-      <div className="mb-8">
-        <Link href="/" className="text-sm text-gray-500 hover:text-gray-700">
-          ← Torna alla Home
-        </Link>
-      </div>
-
-      <h1 className="text-4xl font-bold mb-8">Cookie Policy</h1>
+    <main className="max-w-3xl mx-auto px-6 py-16">
+      <h1 className="text-4xl font-serif mb-8">Cookie Policy</h1>
       
-      <div className="prose prose-lg max-w-none text-gray-700">
-        <h2>Cosa sono i cookie</h2>
-        <p>I cookie sono piccoli file di testo che i siti salvano sul tuo dispositivo.</p>
+      <div className="prose prose-gray max-w-none">
+        <p className="text-sm text-gray-500 mb-8">Ultimo aggiornamento: 29 aprile 2026</p>
 
-        <h2>Cookie utilizzati</h2>
-        <table className="w-full text-left border">
-          <thead>
-            <tr className="border-b">
-              <th className="p-2">Nome</th>
-              <th className="p-2">Tipo</th>
-              <th className="p-2">Durata</th>
-              <th className="p-2">Finalità</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr className="border-b">
-              <td className="p-2">sistema90g-cookie-consent</td>
-              <td className="p-2">Tecnico</td>
-              <td className="p-2">1 anno</td>
-              <td className="p-2">Salva la tua scelta sul banner cookie</td>
-            </tr>
-            <tr className="border-b">
-              <td className="p-2">_ga, _gid, _gat</td>
-              <td className="p-2">Analytics</td>
-              <td className="p-2">2 anni / 24h / 1 min</td>
-              <td className="p-2">Google Analytics 4, statistiche anonime</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <h2>Come disabilitare i cookie</h2>
+        <h2>Titolare</h2>
         <p>
-          Puoi rifiutare i cookie non essenziali dal banner. Puoi anche cancellarli dalle impostazioni del browser. 
-          Disabilitare i cookie tecnici può compromettere il funzionamento del sito.
+          <strong>Sistema90G di Gian Carlo Primo</strong><br/>
+          Via F. Vanga 9, 38061 Ala (TN)<br/>
+          Email: sistema90@icloud.com<br/>
+          Tel: +39 327 547 8485
         </p>
 
-        <p className="mt-8">
-          Per domande: <Link href="/contatti" className="underline">contattaci</Link>.
+        <h2>1. Cosa sono i Cookie</h2>
+        <p>
+          I cookie sono piccoli file di testo che i siti visitati inviano al browser, 
+          dove vengono memorizzati per essere poi ritrasmessi agli stessi siti alla visita successiva.
+        </p>
+
+        <h2>2. Cookie Utilizzati</h2>
+        <p><strong>Questo sito usa SOLO cookie tecnici necessari:</strong></p>
+        <ul>
+          <li><strong>Next.js / Vercel:</strong> gestiscono sessione, sicurezza e bilanciamento carico. Durata: sessione</li>
+          <li><strong>Stripe:</strong> se acquisti, per processare il pagamento in sicurezza. Durata: sessione</li>
+        </ul>
+        <p>
+          <strong>NON usiamo:</strong> cookie di profilazione, marketing, statistica, social plugin.
+        </p>
+
+        <h2>3. Base Giuridica</h2>
+        <p>
+          I cookie tecnici non richiedono consenso preventivo ai sensi dell'art. 122 Codice Privacy 
+          e del Provvedimento Garante 8 maggio 2014, perché necessari al funzionamento del sito.
+        </p>
+
+        <h2>4. Come Disabilitarli</h2>
+        <p>
+          Puoi bloccare i cookie dalle impostazioni del browser. Nota: disabilitando i cookie tecnici 
+          il sito potrebbe non funzionare correttamente.
+        </p>
+
+        <h2>5. Contatti</h2>
+        <p>
+          Per domande su questa policy: sistema90@icloud.com
         </p>
       </div>
     </main>
