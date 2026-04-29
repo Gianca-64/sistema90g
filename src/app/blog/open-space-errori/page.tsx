@@ -1,4 +1,5 @@
  import Link from 'next/link'
+import Image from 'next/image'
 
 export const metadata = {
   title: 'Open space: 5 errori di distribuzione da evitare prima del cantiere',
@@ -9,17 +10,23 @@ export default function OpenSpaceErrori() {
   return (
     <main className="max-w-3xl mx-auto px-6 py-16">
       <div className="mb-4">
-        <Link href="/" className="text-sm text-gray-500 hover:underline">← Home</Link>
+        <Link href="/blog" className="text-sm text-gray-500 hover:underline">← Blog</Link>
       </div>
 
       <article className="prose prose-lg prose-gray">
+        <div className="text-xs text-green-700 font-semibold mb-2 uppercase">DISTRIBUZIONE</div>
         <h1 className="mb-6">Open space: 5 errori di distribuzione da evitare prima del cantiere</h1>
         
-        <img 
-          src="/blog/open-space-errori.jpg" 
-          alt="Schema open space con errori di distribuzione evidenziati"
-          className="w-full h-auto rounded-lg my-8"
-        />
+        <div className="relative w-full h-96 rounded-lg overflow-hidden my-8 not-prose">
+          <Image 
+            src="/hero-distribuzione-800.jpeg" 
+            alt="Schema open space con errori di distribuzione evidenziati"
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 768px"
+            priority
+          />
+        </div>
 
         <p className="lead">
           Isola messa male, triangolo di lavoro interrotto, percorsi che si incrociano. 
@@ -100,13 +107,13 @@ export default function OpenSpaceErrori() {
             con le correzioni da apportare al progetto.
           </p>
           <div className="flex items-center gap-6">
-            <span className="text-3xl font-bold">Da 97€</span>
-            <a 
-              href="https://wa.me/393275478485?text=Voglio%20l'Analisi%20Distribuzione%20Open%20Space"
-              className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700"
+            <span className="text-3xl font-bold">97€</span>
+            <Link 
+              href="/servizi/distribuzione-cucina"
+              className="bg-green-700 text-white px-6 py-3 rounded-lg hover:bg-green-800 font-semibold"
             >
-              Prenota su WhatsApp
-            </a>
+              Scopri il servizio →
+            </Link>
           </div>
         </div>
 
