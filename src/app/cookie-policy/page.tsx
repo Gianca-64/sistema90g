@@ -14,37 +14,18 @@
           Tel: +39 327 547 8485
         </p>
 
-        <h2>1. Cosa sono i Cookie</h2>
-        <p>
-          I cookie sono piccoli file di testo che i siti visitati inviano al browser, 
-          dove vengono memorizzati per essere poi ritrasmessi agli stessi siti alla visita successiva.
-        </p>
-
-        <h2>2. Cookie Utilizzati</h2>
+        <h2>Cookie Utilizzati</h2>
         <p><strong>Questo sito usa SOLO cookie tecnici necessari:</strong></p>
         <ul>
-          <li><strong>Next.js / Vercel:</strong> gestiscono sessione, sicurezza e bilanciamento carico. Durata: sessione</li>
-          <li><strong>Stripe:</strong> se acquisti, per processare il pagamento in sicurezza. Durata: sessione</li>
+          <li><strong>Next.js / Vercel:</strong> gestiscono sessione e sicurezza. Durata: sessione</li>
+          <li><strong>Stripe:</strong> se acquisti, per processare il pagamento. Durata: sessione</li>
         </ul>
-        <p>
-          <strong>NON usiamo:</strong> cookie di profilazione, marketing, statistica, social plugin.
-        </p>
+        <p><strong>NON usiamo:</strong> cookie di profilazione, marketing, analytics, social.</p>
 
-        <h2>3. Base Giuridica</h2>
+        <h2>Base Giuridica</h2>
         <p>
-          I cookie tecnici non richiedono consenso preventivo ai sensi dell'art. 122 Codice Privacy 
-          e del Provvedimento Garante 8 maggio 2014, perché necessari al funzionamento del sito.
-        </p>
-
-        <h2>4. Come Disabilitarli</h2>
-        <p>
-          Puoi bloccare i cookie dalle impostazioni del browser. Nota: disabilitando i cookie tecnici 
-          il sito potrebbe non funzionare correttamente.
-        </p>
-
-        <h2>5. Contatti</h2>
-        <p>
-          Per domande su questa policy: sistema90@icloud.com
+          I cookie tecnici non richiedono consenso ai sensi dell'art. 122 Codice Privacy, 
+          perché necessari al funzionamento del sito.
         </p>
       </div>
     </main>
