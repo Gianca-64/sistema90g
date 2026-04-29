@@ -14,7 +14,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         {children}
         <footer id="contatti" className="px-6 py-12 bg-gray-50 text-center text-gray-600 text-sm mt-20">
-          <p>Sistema90G © 2026 · Gian Carlo</p>
+          <p>Sistema90G © 2026 · Analisi Tecniche Indipendenti</p>
           <p className="mt-2">
             WhatsApp: <a 
               href="https://wa.me/393275478485" 
