@@ -1,128 +1,55 @@
- import Link from 'next/link'
-import Image from 'next/image'
+ import { Metadata } from 'next'
 
-export const metadata = {
-  title: 'Open space: 5 errori di distribuzione da evitare prima del cantiere',
-  description: 'Analisi tecnica dei 5 errori di distribuzione più comuni negli open space. Isola, triangolo di lavoro, flussi e orientamenti corretti prima del cantiere.'
+export const metadata: Metadata = {
+  title: '3 Errori da Evitare nell’Open Space Cucina',
+  description: 'Gli errori più comuni nella distribuzione open space: isola che blocca, tavolo nei flussi, cappa senza foro. Come verificarli prima del cantiere.',
+  alternates: {
+    canonical: 'https://www.sistema90g.it/blog/open-space-errori',
+  },
 }
 
-export default function OpenSpaceErrori() {
+export default function Page() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Qual è l'errore più comune nella cucina open space?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "L'isola posizionata senza verificare i flussi. Se blocca il passaggio tra frigo, lavello e piano cottura, crei un percorso a ostacoli. La distanza minima tra isola e mobili è 120cm per passare comodi anche con ante aperte."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quanto spazio serve per il tavolo in open space?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Minimo 90cm tra tavolo e piano cucina per aprire cassetti e passare. Se metti il tavolo al centro dei flussi principali, ogni volta che cucini qualcuno si alza e intralcia. Meglio defilarlo verso la zona living."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Posso mettere la cappa senza foro esterno in open space?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sì, ma solo con cappa a ricircolo con filtri a carbone attivi. In open space gli odori invadono subito il living. Verifica che la portata sia almeno 600 m³/h e che i filtri siano accessibili per manutenzione ogni 3 mesi."
+        }
+      }
+    ]
+  }
+
   return (
-    <main className="max-w-3xl mx-auto px-6 py-16">
-      <div className="mb-4">
-        <Link href="/blog" className="text-sm text-gray-500 hover:underline">← Blog</Link>
-      </div>
-
-      <article className="prose prose-lg prose-gray">
-        <div className="text-xs text-green-700 font-semibold mb-2 uppercase">DISTRIBUZIONE</div>
-        <h1 className="mb-6">Open space: 5 errori di distribuzione da evitare prima del cantiere</h1>
-        
-        <div className="relative w-full h-96 rounded-lg overflow-hidden my-8 not-prose">
-          <Image 
-            src="/hero-distribuzione-800.jpeg" 
-            alt="Schema open space con errori di distribuzione evidenziati"
-            fill
-            className="object-cover"
-            sizes="(max-width: 768px) 100vw, 768px"
-            priority
-          />
-        </div>
-
-        <p className="lead">
-          Isola messa male, triangolo di lavoro interrotto, percorsi che si incrociano. 
-          Ecco i 5 errori di distribuzione che compromettono la funzionalità dell'open space 
-          e richiedono modifiche edili costose.
-        </p>
-
-        <p>
-          Un open space progettato senza verifica tecnica obbliga a compromessi per tutta la durata 
-          dell'abitazione. Il progetto del mobiliere segue l'estetica. La verifica tecnica controlla 
-          che gli spazi siano vivibili.
-        </p>
-
-        <h2>1. Isola cucina che blocca il passaggio</h2>
-        <p>
-          La distanza minima tra isola e arredi perimetrali deve essere 120cm per garantire il passaggio 
-          con vassoi e l'apertura delle ante. Con 60-80cm il passaggio è impedito. 
-        </p>
-        <p>
-          <strong>Conseguenza tecnica:</strong> per correggere l'errore serve spostare l'isola. 
-          Significa demolire il massetto, spostare scarico, adduzioni gas/acqua e linee elettriche già 
-          predisposte, rifare il pavimento.
-        </p>
-
-        <h2>2. Triangolo di lavoro frigorifero-lavello-fuochi interrotto</h2>
-        <p>
-          Il triangolo di lavoro è il percorso che unisce le tre funzioni principali. Se l'isola o il tavolo 
-          si interpongono, il percorso da lineare diventa tortuoso. Da 2 metri lineari si passa a 6 metri 
-          per ogni spostamento.
-        </p>
-        <p>
-          <strong>Conseguenza tecnica:</strong> inefficienza quotidiana permanente. L'unica correzione 
-          è riprogettare la disposizione, con smantellamento e rifacimento degli impianti.
-        </p>
-
-        <h2>3. Orientamento errato tra zona cottura e zona soggiorno</h2>
-        <p>
-          L'open space nasce per unificare le attività. Se chi opera in cucina è rivolto verso il muro 
-          e chi è sul divano è rivolto verso la TV, si creano due ambienti separati senza pareti.
-        </p>
-        <p>
-          <strong>Conseguenza tecnica:</strong> mancato raggiungimento dell'obiettivo funzionale. 
-          La correzione richiede l'inversione completa della distribuzione.
-        </p>
-
-        <h2>4. Piano cottura a isola senza predisposizione scarico cappa</h2>
-        <p>
-          Una cappa aspirante a isola richiede un foro a soffitto con tubo da 150mm di diametro fino 
-          all'esterno. Se il foro non è previsto o è da 100mm, l'unica alternativa è la cappa a ricircolo.
-        </p>
-        <p>
-          <strong>Conseguenza tecnica:</strong> carotaggio del solaio non previsto, oppure sistema a 
-          ricircolo con sostituzione filtri a carbone ogni 3-6 mesi e prestazioni di aspirazione ridotte.
-        </p>
-
-        <h2>5. Tavolo da pranzo collocato nella zona di passaggio</h2>
-        <p>
-          Posizionare il tavolo nel corridoio naturale tra cucina e soggiorno blocca il flusso quando 
-          i posti sono occupati. Per liberare il passaggio servono almeno 80cm dietro ogni sedia.
-        </p>
-        <p>
-          <strong>Conseguenza tecnica:</strong> spostamento del tavolo richiede la rilocazione del punto 
-          luce a soffitto e l'eventuale riparazione della pavimentazione se il lampadario era già installato.
-        </p>
-
-        <h2>Quando correggere: solo prima del cantiere</h2>
-        <p>
-          Dopo la posa dei pavimenti e degli impianti, ogni modifica alla distribuzione diventa un 
-          intervento edile di demolizione e ricostruzione. La verifica preventiva evita contenziosi 
-          con l'impresa e con il fornitore arredi.
-        </p>
-
-        <div className="bg-gray-50 p-8 rounded-lg my-12 not-prose">
-          <h3 className="text-xl font-semibold mb-4">Servizio: Analisi Distribuzione</h3>
-          <p className="mb-6">
-            Analizzo la pianta del tuo open space prima dell'inizio lavori. Verifico flussi, triangoli 
-            di lavoro, passaggi minimi e orientamenti funzionali. Consegno elaborato grafico quotato 
-            con le correzioni da apportare al progetto.
-          </p>
-          <div className="flex items-center gap-6">
-            <span className="text-3xl font-bold">Analisi Distribuzione</span>
-            <Link 
-              href="/servizi/distribuzione-cucina"
-              className="bg-green-700 text-white px-6 py-3 rounded-lg hover:bg-green-800 font-semibold"
-            >
-              Scopri il servizio →
-            </Link>
-          </div>
-        </div>
-
-        <p>
-          <strong>Gian Carlo Primo</strong><br/>
-          Tecnico indipendente. Analizzo distribuzioni di appartamenti e ville per trovare soluzioni 
-          ottimali e funzionali prima del cantiere.
-        </p>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <article className="prose mx-auto px-4 py-12">
+        <h1>3 Errori da Evitare nell’Open Space Cucina</h1>
+        {/* Inserisci qui il contenuto attuale dell'articolo */}
       </article>
-    </main>
+    </>
   )
 }

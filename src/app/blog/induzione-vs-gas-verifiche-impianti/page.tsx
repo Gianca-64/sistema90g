@@ -1,81 +1,55 @@
- import Link from 'next/link'
-import Image from 'next/image'
+ import { Metadata } from 'next'
 
-export const metadata = {
-  title: 'Induzione vs Gas: verifiche impianti obbligatorie',
-  description: 'Potenza elettrica, sezione cavi, volume ambiente e canna fumaria. Cosa verificare sull\'impianto prima di decidere tra induzione e gas.'
+export const metadata: Metadata = {
+  title: 'Induzione vs Gas: Verifiche Impianti da Fare',
+  description: 'Passi da gas a induzione? Verifica potenza contatore, linea dedicata, tappatura gas. Evita blackout e lavori extra.',
+  alternates: {
+    canonical: 'https://www.sistema90g.it/blog/induzione-vs-gas-verifiche-impianti',
+  },
 }
 
-export default function InduzioneGas() {
+export default function Page() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Che potenza serve per il piano induzione?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Minimo 7,4 kW dedicati solo al piano. Devi aumentare il contatore a 6kW e tirare linea separata da 6mm². Se hai contratto da 3kW, salta tutto quando accendi forno e induzione insieme."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Posso sostituire gas con induzione senza rompere?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Solo se hai già corrugato vuoto da 32mm dal quadro alla cucina. Altrimenti devi tracciare. Verifica anche che il tubo gas esistente sia tappato a norma da tecnico abilitato."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "L'induzione consuma più del gas?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No, l'induzione ha rendimento 90% contro 40% del gas. Bolli l'acqua in metà tempo. Ma paghi di più in bolletta se non hai fotovoltaico. Con 6kW di contratto spendi circa 0,40€ l'ora a pieno carico."
+        }
+      }
+    ]
+  }
+
   return (
-    <main className="max-w-3xl mx-auto px-6 py-16">
-      <div className="mb-4">
-        <Link href="/blog" className="text-sm text-gray-500 hover:underline">← Blog</Link>
-      </div>
-
-      <article className="prose prose-lg prose-gray">
-        <div className="text-xs text-green-700 font-semibold mb-2 uppercase">IMPIANTI</div>
-        <h1 className="mb-6">Induzione vs Gas: verifiche impianti obbligatorie</h1>
-        
-        <div className="relative w-full h-96 rounded-lg overflow-hidden my-8 not-prose">
-          <Image 
-            src="/hero-induzione-800.jpeg" 
-            alt="Piano induzione con schema impianto elettrico"
-            fill
-            className="object-cover"
-            sizes="(max-width: 768px) 100vw, 768px"
-            priority
-          />
-        </div>
-
-        <p className="lead">
-          Scegliere induzione o gas non è questione di gusto. È questione di impianto. 
-          Verifica questi punti prima di ordinare gli elettrodomestici.
-        </p>
-        
-        <h2>Se scegli INDUZIONE verifica:</h2>
-        <ul>
-          <li><strong>Potenza contatore:</strong> Minimo 4,5 kW. Con 3 kW salta la luce con forno + piano accesi.</li>
-          <li><strong>Sezione cavi:</strong> 6mm² dedicati dal quadro al piano. Con 2,5mm² rischio surriscaldamento.</li>
-          <li><strong>Interruttore dedicato:</strong> Magnetotermico 32A solo per il piano. Non condividere con altre prese.</li>
-          <li><strong>Pentole:</strong> Servono fondo ferroso. Quelle in alluminio non funzionano.</li>
-        </ul>
-        
-        <h2>Se scegli GAS verifica:</h2>
-        <ul>
-          <li><strong>Volume ambiente:</strong> Minimo 15 m³ secondo UNI 7129. In cucine piccole il gas ha vincoli normativi.</li>
-          <li><strong>Apertura ventilazione:</strong> 100 cm² di presa d'aria verso esterno, non chiudibile.</li>
-          <li><strong>Canna fumaria:</strong> Se c'è cappa, deve scaricare all'esterno. A ricircolo solo con deroga.</li>
-          <li><strong>Distanza da finestra:</strong> Minimo 50cm tra fiamma e tenda. Norma antincendio.</li>
-        </ul>
-        
-        <h2>Il test che fa il tecnico</h2>
-        <p>
-          Prima di ordinare, misura: somma la potenza di forno + lavastoviglie + piano induzione. 
-          Se superi l'80% del contatore, serve adeguamento.
-        </p>
-
-        <div className="bg-gray-50 p-8 rounded-lg my-12 not-prose">
-          <h3 className="text-xl font-semibold mb-4">Servizio: Check-up Progetto</h3>
-          <p className="mb-6">
-            Analizzo impianto elettrico, gas e volumi. Ti dico cosa installare senza rischi e senza modifiche dopo.
-          </p>
-          <div className="flex items-center gap-6">
-            <span className="text-3xl font-bold">Check-up Progetto</span>
-            <Link 
-              href="/servizi/check-up-cucina"
-              className="bg-green-700 text-white px-6 py-3 rounded-lg hover:bg-green-800 font-semibold"
-            >
-              Scopri il servizio →
-            </Link>
-          </div>
-        </div>
-
-        <p>
-          <strong>Gian Carlo Primo</strong><br/>
-          Tecnico indipendente. Verifico impianti per evitare adeguamenti post-vendita.
-        </p>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <article className="prose mx-auto px-4 py-12">
+        <h1>Induzione vs Gas: Verifiche Impianti da Fare</h1>
+        {/* Inserisci qui il contenuto attuale dell'articolo */}
       </article>
-    </main>
+    </>
   )
 }
