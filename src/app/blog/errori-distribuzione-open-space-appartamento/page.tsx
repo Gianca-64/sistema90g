@@ -1,4 +1,4 @@
- import { Metadata } from 'next'
+import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Errori Distribuzione Open Space in Appartamento',
@@ -46,4 +46,47 @@ export default function Page() {
         }
       }
     ]
- 
+  }
+
+  return (
+    <main className="max-w-3xl mx-auto px-6 py-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      
+      <article>
+        <h1 className="text-4xl font-serif font-bold mb-8">
+          Errori Distribuzione Open Space in Appartamento
+        </h1>
+        
+        <div className="prose prose-lg">
+          <p>
+            L'open space in appartamento è il più rischioso. In villa hai spazio, in appartamento no. 
+            Qui i 4 errori che ti costano migliaia di euro in modifiche dopo.
+          </p>
+          
+          <h2>1. Comprimere la zona giorno per l'isola</h2>
+          <p>
+            Se hai meno di 35mq totali, l'isola ti mangia il living. Distanza minima divano-cucina: 250cm.
+          </p>
+          
+          <h2>2. Flussi incrociati tavolo-cucina-divano</h2>
+          <p>
+            Non mettere il tavolo tra cucina e divano. Traccia i percorsi prima di disegnare.
+          </p>
+          
+          <h2>3. Spostare cucina senza verificare scarichi</h2>
+          <p>
+            In condominio lo scarico è fisso. Oltre 3 metri serve pompa. Verifica anche la cappa.
+          </p>
+          
+          <h2>4. Open space sotto 28mq</h2>
+          <p>
+            Minimo 28-30mq per cucina + living vivibili. Sotto hai due ambienti zoppi.
+          </p>
+        </div>
+      </article>
+    </main>
+  )
+}
