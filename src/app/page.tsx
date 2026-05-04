@@ -3,39 +3,55 @@ import Image from 'next/image'
 
 const servizi = [
   {
-    nome: 'Analisi Distribuzione',
-    prezzo: '97€',
-    descrizione: 'Verifico flussi e funzionalità della pianta prima del cantiere.',
-    link: '/servizi/distribuzione-cucina',
-    icona: '📐'
+    nome: 'Consulenza Finiture',
+    descrizione: 'Risolviamo dubbi tecnici su materiali, colori e top. Analisi compatibilità e rischi nascosti.',
+    link: '/contatti',
+    icona: '🎨'
   },
   {
-    nome: 'Check-up Progetto',
-    prezzo: '147€',
-    descrizione: 'Analisi tecnica del progetto cucina prima della firma.',
-    link: '/servizi/check-up-cucina',
-    icona: '✓'
-  },
-  {
-    nome: 'Add-on Capitolato',
-    prezzo: '47€',
-    descrizione: 'Revisione capitolato materiali e ferramenta. Solo con Check-up.',
-    link: '/servizi/add-on-capitolato',
+    nome: 'Revisione Capitolato',
+    descrizione: 'Controlliamo spessori, ferramenta e voci nascoste nel capitolato del mobiliere prima della firma.',
+    link: '/contatti',
     icona: '📋'
   },
   {
-    nome: 'Blindatura Contratto',
-    prezzo: '297€',
-    descrizione: 'Revisione clausole tecniche e penali prima della firma.',
-    link: '/servizi/blindatura',
+    nome: 'Check-up Progetto',
+    descrizione: 'Analizziamo foto ambiente + progetto mobiliere. Troviamo problemi ergonomici e tecnici.',
+    link: '/contatti',
+    icona: '✓'
+  },
+  {
+    nome: 'Blindatura Pre-Contratto',
+    descrizione: 'Checklist clausole critiche da verificare. Eviti sorprese da migliaia di euro prima di firmare.',
+    link: '/contatti',
     icona: '🛡️'
   },
   {
     nome: 'Progetto da Zero',
-    prezzo: '890€',
-    descrizione: 'Progetto completo da piantina vuota a capitolato con render 3D.',
-    link: '/servizi/progetto-da-zero',
+    descrizione: 'Progettiamo noi la cucina completa con 3D e capitolato blindato. Vai dal mobiliere preparato.',
+    link: '/contatti',
     icona: '🏗️'
+  }
+]
+
+const collaborazioni = [
+  {
+    nome: 'Tech per Geometri e Imprese',
+    descrizione: 'Analisi tecnica pre-posa. Report PDF con rischi e soluzioni quote/impianti in 24h.',
+    link: '/contatti',
+    icona: '👷'
+  },
+  {
+    nome: 'Archis per Architetti',
+    descrizione: 'Verifica norme DM 236/89 + impatto estetico. Consegniamo report, progetto esecutivo e render.',
+    link: '/contatti',
+    icona: '📐'
+  },
+  {
+    nome: 'Agency per Agenzie Immobiliari',
+    descrizione: 'Evitiamo blocco vendita per problemi cucina. Report rischi + render marketing.',
+    link: '/contatti',
+    icona: '🏠'
   }
 ]
 
@@ -125,7 +141,7 @@ export default function Home() {
       <section className="bg-white py-16 border-b">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-serif font-bold mb-4">Servizi Tecnici</h2>
+            <h2 className="text-4xl font-serif font-bold mb-4">Per chi compra casa</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Analisi indipendenti per ogni fase del progetto. Dal controllo pianta al contratto firmato.
             </p>
@@ -134,7 +150,7 @@ export default function Home() {
           <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
             {servizi.map((servizio) => (
               <Link 
-                key={servizio.link} 
+                key={servizio.nome} 
                 href={servizio.link}
                 className="border border-gray-200 rounded-lg p-6 hover:border-green-700 hover:shadow-lg transition group"
               >
@@ -145,10 +161,38 @@ export default function Home() {
                 <p className="text-sm text-gray-600 mb-4 leading-relaxed">
                   {servizio.descrizione}
                 </p>
-                <div className="flex items-center justify-between">
-                  <span className="text-xl font-bold">{servizio.prezzo}</span>
-                  <span className="text-green-700 text-sm font-semibold">Scopri →</span>
-                </div>
+                <span className="text-green-700 text-sm font-semibold">Contattaci →</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* NUOVA SEZIONE COLLABORAZIONI */}
+      <section className="bg-gray-50 py-16 border-b">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-serif font-bold mb-4">Per Professionisti</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Sei un architetto, geometra o agenzia? Lavora con il Metodo 90G.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-6">
+            {collaborazioni.map((item) => (
+              <Link 
+                key={item.nome} 
+                href={item.link}
+                className="border border-gray-200 rounded-lg p-6 hover:border-blue-700 hover:shadow-lg transition group bg-white"
+              >
+                <div className="text-3xl mb-3">{item.icona}</div>
+                <h3 className="font-serif font-bold text-lg mb-2 group-hover:text-blue-700">
+                  {item.nome}
+                </h3>
+                <p className="text-sm text-gray-600 mb-4 leading-relaxed">
+                  {item.descrizione}
+                </p>
+                <span className="text-blue-700 text-sm font-semibold">Collabora con noi →</span>
               </Link>
             ))}
           </div>
